@@ -6,30 +6,37 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
-    <header>
-      <div>
-        <img src="index.html" width="74" height="23" alt="logo">
+    <header class="main-header">
+      <div class="main-header__logo-wrap">
+        <a href="index.html">
+          <img src="" width="74" height="23" alt="logo">
+        </a>
       </div>
-      <nav class="main-navigation">
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Конкурс</a></li>
-        </ul>
-      </nav>
+      <div class="main-header__nav-wrap">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="#" class="main-nav__toggle main-nav__toggle--close"></a>
+        </nav>
+      </div>
     </header>
 
 
 
     <main>
-      <div>
+      <div class="inner-page-title">
         <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
       </div>
 
-      <form action="">
-        <div>
-          <div>Поделитесь своей историей и получите шанс выйграть ценный приз – 1000 миль на вашу бонусную карту!</div>
+      <div class="competition-text">Поделитесь своей историей и получите шанс выйграть ценный приз – 1000 миль на вашу бонусную карту!</div>
+
+      <form class="form" action="">
+
+        <div class="form__part">
           <div>
             <label for="name-field">Имя:*</label>
             <input type="text" name="name" value="" placeholder="Введите ваше имя" id="name-field">
@@ -44,7 +51,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="form__part">
           <div>С каким приложением путешествовали?*</div>
           <div>
             <input type="radio" name="app-choice" value="pink-ios" id="ios-field" checked>
@@ -60,12 +67,12 @@
           </div>
         </div>
 
-        <div>
+        <div class="form__part">
           <div>Когда вы путешествовали?*</div>
           <div>
             <input type="text" name="departure-date" value="" placeholder="1 апреля 2015" id="departure-date-field">
             <label for="departure-date-field">Дата выезда</label>
-          </p>
+          </div>
           <div>
             <input type="number" name="trip-duration" value="" placeholder="1 дней" id="trip-duration-field">
             <label for="trip-duration-field">Продолжительность</label>
@@ -76,7 +83,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="form__part">
           <div>
             <label for="number-of-travellers-field">Количество попутчиков:*</label>
             <input type="number" name="number-of-travellers" value="" placeholder="2 чел" id="number-of-travellers-field">
@@ -99,8 +106,8 @@
           </div>
         </div>
 
-        <div>
-          <div>Ваши безбашенные достижения в путешествии</p>
+        <div class="form__part">
+          <div>Ваши безбашенные достижения в путешествии</div>
           <div>
             <input type="checkbox" id="selfie-field" name="selfie" checked>
             <label for="selfie-field">Сделал селфи с акулой</label>
@@ -127,7 +134,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="form__part">
           <div>Ваши фотографии из поездки:*</div>
           <button>ЗАГРУЗИТЬ ФОТО</button>
           <div>
