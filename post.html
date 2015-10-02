@@ -6,37 +6,42 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
-    <header>
-      <div>
-        <img src="index.html" width="74" height="23" alt="logo">
+    <header class="main-header">
+      <div class="main-header__logo-wrap">
+        <a href="index.html">
+          <img src="" width="74" height="23" alt="logo">
+        </a>
       </div>
-      <nav class="main-navigation">
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Конкурс</a></li>
-        </ul>
-      </nav>
+      <div class="main-header__nav-wrap">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Конкурс</a></li>
+          </ul>
+          <a href="#" class="main-nav__toggle main-nav__toggle--close"></a>
+        </nav>
+      </div>
     </header>
 
 
 
     <main>
-      <div>
+      <div class="inner-page-title">
         <h1>Блог путешественников, пользователей Пинк</h1>
       </div>
-      <article>
-        <section>
+      <article class="post">
+        <section class="post__post-preview">
           <h1>Антон и Надя в Тайланде</h1>
           <time>Опубликовано: 6 месяцев назад</time>
           <p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
         </section>
-        <section>
+        <section class="post__part">
           <h2>Предыстория</h2>
           <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="#">skyscanner.ru</a> мы все-таки решились!</p>
         </section>
-        <section>
+        <section class="post__part">
           <h2>Выбор отеля</h2>
           <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
           <ul>
@@ -50,18 +55,19 @@
             <p>Олег, г. Москва</p>
           </blockquote>
         </section>
-        <section>
+        <section class="post__part">
           <h2>Местная еда</h2>
           <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
         </section>
       </article>
         
-        <div>
-          <a href="#">Пред.</a>
-          <a href="#">След.</a>
-        </div>
-        <div><a href="#">Назад к списку</a></div>
-      </section>
+      <div>
+        <a href="#">Пред.</a>
+        <a href="#">След.</a>
+      </div>
+      <div>
+        <a href="#">Назад к списку</a>
+      </div>
     </main>
 
 
