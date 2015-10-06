@@ -1,0 +1,54 @@
+//
+//
+// Стили для хедера главной страницы 
+
+.main-header {
+  background: $bg-pic-header url('../img/bg_main_header.jpg') no-repeat 50% 0%;
+  color: #fff;
+
+  &__nav-wrap {
+    margin-bottom: 30px;
+    background: rgb(0, 0, 0);      // Нужно для браузеров
+    background: rgba(0, 0, 0, .3); // не поддерживающих rgba?
+  }
+
+  &__top {
+    @include container();  // Центровка и ширина
+    @include clearfix();   // Псевдораспорка для флоат-элементов
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative; // Вложен абсолютный элемент &__menu--visible
+  }
+
+  &__logo-wrap {
+    float: left;
+    width: 80px;
+  }
+
+  &__toggle-wrap {
+    float: right;
+    max-width: 70px;
+  }
+
+  &__menu {
+    @include container();
+    display: none; // По дефолту навигация скрыта в гамбургере
+  }
+
+  &__menu--visible { // НЕДОДЕЛАНО
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50;
+  }
+
+  &__title {
+    @include container();  // Центровка и ширина
+    padding-bottom: 320px;
+    text-align: center;
+  }
+
+}
+
+

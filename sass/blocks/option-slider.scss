@@ -1,0 +1,122 @@
+//
+//
+// Слайдер с тарифами
+
+.option-slider {
+  margin: 0 auto;  // Из-за тянющихся на всю ширину строк
+  width: 320px;    // используем не контейнер, а всю ширину.
+  position: relative;
+  z-index: 10;     // ????? проблемы с белой маской
+  padding-top: 90px;
+  padding-bottom: 99px;
+  background: #fff url('../img/bg_options.png') no-repeat 50% 105%;
+  text-align: center;
+
+  &__controls-wrap {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 140px;
+    height: 14px;
+    margin-left: -70px;  // Для центровки
+    text-align: center;
+    z-index: 10;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+    background: #b5b9be;
+    border: 3px solid #f2f2f2;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__control--active {
+    background-color: #fff;
+    border-color: $text-color;
+  }
+
+  //Можно реализовать слайдер на CSS
+  // &__options-wrap {
+  //
+  // }
+
+  // &__option {
+
+  // }
+
+  &__header {
+    background: $text-color;
+  }
+
+  &__header-inner {
+    margin: 0 20px;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    border-bottom: none;
+
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: $text-color;
+  }
+
+  &__promo {
+    position: absolute;
+    left: -2px;
+    top: 0;
+  }
+
+  &__name {
+    margin-bottom: 7px;
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__price {
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+  &__item {
+    background: #fff;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  &__item-inner {
+    @include clearfix();
+    margin: 0 20px;
+    padding: 16px 18px 16px 22px;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    border-bottom: none;
+    vertical-align: center;
+
+    font-size: $font-size;
+    line-height: $line-height + 6px;
+    font-weight: $weight-normal;
+    font-family: $font-stack;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+
+  &__item-text {
+    float: left; 
+    max-width: 160px;
+  }
+
+  &__item-img {
+    float: right;
+    max-width: 35px;
+  }
+
+}

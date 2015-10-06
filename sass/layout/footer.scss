@@ -1,0 +1,68 @@
+//
+//
+// Стили для футера главной страницы 
+
+.main-footer {
+  @include container();
+  padding-top: 45px;
+  background: #fff;
+  text-align: center;
+  font-family: $font-stack;
+  color: $text-color;
+
+  &__title {
+    margin-bottom: 40px;
+
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+  &__title-item {
+    margin: 0;
+  }
+
+  &__title-item:first-child {
+    margin-bottom: 10px;
+  }
+
+  &__contacts {
+    margin-bottom: 30px;
+  }
+
+  &__contacts-header {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__contacts-item {
+    margin: 0;
+
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+    color: $pink-color;
+  }
+
+  &__map {
+    position: relative;
+    height: 214px;
+    z-index: 1;
+    overflow: hidden;  // Поставил у слайдера z-index: 10
+                       // Но маска всё равно перекрывает слайдер
+                       // Поэтому оверфлоу. Может нужно по-другому
+    background: #f3f1ea url('../img/main-map.jpg') no-repeat 0% 100%;
+  }
+
+  &__map-mask {
+    position: absolute;
+    margin: auto;
+    z-index: 5;
+    top: -50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
