@@ -6,7 +6,7 @@
   margin: 0 auto;  // Из-за тянющихся на всю ширину строк
   width: 320px;    // используем не контейнер, а всю ширину.
   position: relative;
-  z-index: 10;     // ????? проблемы с белой маской
+
   padding-top: 90px;
   padding-bottom: 99px;
   background: #fff url('../img/bg_options.png') no-repeat 50% 105%;
@@ -40,7 +40,7 @@
     border-color: $text-color;
   }
 
-  //Можно реализовать слайдер на CSS
+  // Можно реализовать слайдер на CSS
   // &__options-wrap {
   //
   // }
@@ -70,10 +70,17 @@
     background: $text-color;
   }
 
-  &__promo {
+  &__header-inner::before {
+    content: "";
+
     position: absolute;
     left: -2px;
     top: 0;
+
+    background: url('../img/promo_popular.png') no-repeat 50% 50%;
+
+    width: 74px;
+    height: 73px;
   }
 
   &__name {

@@ -8,8 +8,8 @@
 
   &__nav-wrap {
     margin-bottom: 30px;
-    background: rgb(0, 0, 0);      // Нужно для браузеров
-    background: rgba(0, 0, 0, .3); // не поддерживающих rgba?
+    background: rgb(0, 0, 0);      // Для IE8
+    background: rgba(0, 0, 0, .3);
   }
 
   &__top {
@@ -17,7 +17,7 @@
     @include clearfix();   // Псевдораспорка для флоат-элементов
     padding-top: 20px;
     padding-bottom: 20px;
-    position: relative; // Вложен абсолютный элемент &__menu--visible
+    position: relative;    // Вложен абсолютный элемент &__menu--visible
   }
 
   &__logo-wrap {
@@ -32,10 +32,10 @@
 
   &__menu {
     @include container();
-    display: none; // По дефолту навигация скрыта в гамбургере
+    display: none;        // По дефолту навигация скрыта в гамбургере
   }
 
-  &__menu--visible { // НЕДОДЕЛАНО
+  &__menu--visible {      // НЕДОДЕЛАНО
     display: block;
     position: absolute;
     left: 0;
