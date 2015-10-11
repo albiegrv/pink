@@ -1,0 +1,66 @@
+//
+//
+// Слайдер с отзывами
+
+.review-slider {
+  @include container();  // Центровка и ширина
+  position: relative;    // Для абсолют. спозиционированых контролов
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background: #fff;
+  text-align: center;
+
+  &__controls-wrap {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 140px;
+    height: 14px;
+    margin-left: -70px;  // Для центровки
+    text-align: center;
+    z-index: 10;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+    background: #bec2c7;
+    border: 3px solid white;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__control--active {
+    background: #fff;
+    border-color: $text-color;
+  }
+
+  //Можно реализовать слайдер на CSS
+  //
+  // &__slides-wrap {
+
+  // }
+
+  // &__slide {
+
+  // }
+
+  &__author {
+    margin-bottom: 18px;
+
+    font-size: $h2-size;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+  }
+
+  &__text {
+    font-size: $font-size;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+  }
+}
