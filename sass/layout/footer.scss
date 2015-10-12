@@ -1,0 +1,70 @@
+//
+//
+// Стили для футера главной страницы 
+
+.main-footer {
+  @include container();
+  padding-top: 45px;
+  background: #fff;
+  text-align: center;
+  font-family: $font-stack;
+  color: $text-color;
+
+  &__title {
+    margin-bottom: 40px;
+
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+  &__title-item {
+    margin: 0;
+  }
+
+  &__title-item:first-child {
+    margin-bottom: 10px;
+  }
+
+  &__contacts {
+    margin-bottom: 30px;
+  }
+
+  &__contacts-header {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__contacts-item {
+    margin: 0;
+
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+    color: $pink-color;
+  }
+
+  &__map {
+    position: relative;
+    height: 220px;
+    z-index: 1;
+    background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 100%;
+  }
+
+  &__map::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 47px;
+
+    background: url('../img/mask_main-map.png') no-repeat 50% 100%;
+  }
+
+}

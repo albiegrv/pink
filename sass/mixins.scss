@@ -1,0 +1,30 @@
+//
+//
+// Центровка и ширина
+@mixin container() {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+//
+//
+// Псевдораспорка для родителя флоат-элементов
+@mixin clearfix() {
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+//
+//
+// Временная рамка
+@mixin someborder() {
+  border: 1px dotted red;
+}

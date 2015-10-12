@@ -1,0 +1,54 @@
+//
+//
+// Промо блок
+
+.features {
+  @include container();  // Центровка и ширина
+  padding-top: 45px;
+  padding-bottom: 285px;
+  background: #fff url('../img/bg_features.png') no-repeat 100% 122%;
+  text-align: center;
+
+  &__info {
+    margin: 0;
+    margin-bottom: 45px;
+
+    font-size: $font-size + 10px;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+
+    color: $text-color;
+  }
+
+  &__info:nth-child(2) {  // Из-за съезжающего бэкграунда уменьшил
+    margin-bottom: 100px; // По макету 120px
+  }
+
+  &__item {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 17px;
+
+    font-size: $h2-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+
+    color: #000;
+  }
+
+  &__text {
+    margin: 0;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+
+    color: $text-color;
+  }
+}
