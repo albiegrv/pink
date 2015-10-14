@@ -1,0 +1,409 @@
+//
+//
+// Блок с формой
+
+.form {
+    font-size: $font-size + 4px;
+    line-height: $line-height + 6px;
+    font-weight: $weight-normal;
+    font-family: $font-stack;
+
+
+  &__info {
+  @include container();  // Центровка и ширина
+  padding-top: 50px;
+  padding-bottom: 37px;
+
+  text-align: center;
+  background: #fff;
+  color: black;
+
+  font-size: $font-size;
+  }
+
+  &__name-field {
+    @include container();
+    padding-bottom: 25px;
+  }
+
+  &__name-field label {
+    display: block;
+    padding-left: 23px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__name-field input[type="text"] {
+    display: block;
+    margin-bottom: 18px;
+    padding: 15px 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    color: $text-color;
+  }
+
+  &__app-choice-wrap {
+    background: #f2f2f2;
+    padding-bottom: 25px;
+  }
+
+  &__app-choice {
+    @include container();
+    padding-top: 38px;
+    font-size: 0;   // Убираем лишние пробелы у инлайн-блоков
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    text-align: center;
+
+    font-size: $font-size;
+    line-height: $line-height - 6px;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__app-choice input[type="radio"] {
+    display: none;
+  }
+
+  &__app-choice label {
+    position: relative;
+
+    display: inline-block;
+    margin-bottom: 53px;
+    padding-left: 60px;
+
+    font-size: $font-size + 4px;
+    color: $text-color;
+    cursor: pointer;
+    vertical-align: top;
+  }
+
+  &__app-choice input[type="radio"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: 0px;
+  
+    width: 17px;
+    height: 17px;
+
+    background: white;
+    border-radius: 38px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    border: 10px solid white;
+  }
+
+  &__app-choice input[type="radio"]:checked + label::before {
+    background: $pink-color;
+  }
+
+  &__date-field {
+    @include container();
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
+  &__date-field input[type="text"],
+  &__date-field input[type="number"] {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    color: $text-color;
+  }
+
+  &__date-field input[type="number"] {
+    text-align: center;
+  }
+
+  &__date-field input[type="text"]:disabled {
+    background: #f2f2f2;
+  }
+
+  &__date-field label {
+    display: block;
+    margin-bottom: 20px;
+
+    text-align: center;
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__travellers-field-wrap {
+    background: #f2f2f2;
+  }
+
+  &__travellers-field {
+    @include container();
+  }
+
+  &__number-of-travellers {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+
+    border-bottom: 2px solid #e5e5e5;
+    text-align: center;
+  }
+
+  &__number-of-travellers label {
+    display: block;
+    margin-bottom: 30px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__number-of-travellers input[type="number"] {
+    display: block;
+    padding: 15px 20px;
+    
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    
+    background: #f2f2f2;
+    color: $text-color;
+  }
+
+  &__traveller-name {
+    font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
+  }
+
+  &__traveller-name label {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__traveller-name input[type="number"],
+  &__traveller-name input[type="text"] {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    vertical-align: top;
+    font-size: $font-size + 4px;
+
+    color: $text-color;
+  }
+
+  &__traveller-name input[type="number"] {
+    padding: 15px 5px 15px 20px;
+    width: 20%;
+    background: #f2f2f2;
+    border-right: none;
+  }
+
+  &__traveller-name input[type="text"] {
+    padding: 15px 20px;
+    width: 80%;
+  }
+
+  &__traveller-nickname {
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__traveller-nickname label {
+    display: block;
+    padding-right: 115px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__traveller-nickname input[type="text"] {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 15px 20px;
+
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    vertical-align: top;
+    font-size: $font-size + 4px;
+
+    color: $text-color;
+  }
+
+  &__achieve-field {
+    @include container();
+    padding-top: 48px;
+  }
+
+  &__achieve-field input[type="checkbox"] {
+    display: none;
+  }
+
+  &__achieve-field label {
+    position: relative;
+
+    display: inline-block;
+    margin-bottom: 60px;
+    padding-left: 60px;
+
+    font-size: $font-size + 4px;
+    color: $text-color;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  &__achieve-field input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: 0px;
+  
+    width: 37px;
+    height: 37px;
+
+    background: white;
+    border-radius: 2px;
+    border: 2px solid #e5e5e5;
+  }
+
+  &__achieve-field input[type="checkbox"]:checked + label::before {
+    background: url('../img/icon_yes--pink.png') no-repeat 50% 50%;
+  }
+
+  &__photos-field-wrap {
+    background: #f2f2f2;
+  }
+
+  &__photos-field {
+    @include container();
+    padding-top: 32px;
+  }
+
+  &__upload-photo {
+    padding-bottom: 33px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  &__upload-photo button {
+    padding: 15px 0px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    font-weight: $weight-bold;
+    color: $text-color;
+    background: white;
+  }
+
+  &__photos {
+    @include clearfix();
+  }
+
+  &__photo {
+    float: left;
+    position: relative;
+    margin-right: 39px;
+    margin-bottom: 23px;
+    width: 67px;
+  }
+
+  &__photo:nth-child(3n) {
+    margin-right: 0;  // Обнуляем правый маргин у каждой 3-ей фотки
+  }
+
+  &__photo::after {   // Крестик для удаления фото
+    content: "";
+
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); // По макету как будто бордер
+    border-radius: 28px;                    // Но так выглядит лучше
+    background: white url('../img/icon_cross.png') no-repeat 50% 50%;
+    cursor: pointer;
+  }
+
+  &__photo img {  // На всякий случай
+    width: 67px;
+    height: 68px;
+  }
+
+  &__photo span {
+    font-size: $font-size - 2px;
+    line-height: $line-height - 6px;
+    color: $text-color;
+  }
+
+  &__submit-block {
+    @include container();
+    padding-top: 48px;
+    padding-bottom: 55px;
+    text-align: center;
+  }
+
+  &__submit-block input[type="submit"] {
+    margin-bottom: 36px;
+    padding: 15px 0px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #2aab6d;
+    border-radius: 2px;
+
+    font-weight: $weight-bold;
+    color: white;
+    background: #2aab6d;
+  }
+
+  &__submit-block p {
+    display: inline-block;
+    margin: 0;
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+
+  &__submit-block span {
+    color: $pink-color;
+  }
+
+}
