@@ -6,6 +6,10 @@
   background: $bg-pic-header url('../img/bg_main_header.jpg') no-repeat 50% 0%;
   color: #fff;
 
+  &--inner-page { // Фон для внутренних страниц
+    background-image: url('../img/bg_inner_header.jpg');
+  }
+
   &__nav-wrap {
     margin-bottom: 30px;
     background: rgb(0, 0, 0);      // Для IE8
@@ -43,10 +47,14 @@
     top: 50;
   }
 
-  &__title {
+  &__title {    // Для главной страницы
     @include container();  // Центровка и ширина
     padding-bottom: 320px;
     text-align: center;
+  }
+
+  &__title--inner-page { // Блок с заголовком для внутренних страниц
+    padding-bottom: 60px;
   }
 
 }
