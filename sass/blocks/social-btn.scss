@@ -1,0 +1,27 @@
+//
+//
+// Социальные кнопки
+
+.social-btn {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+
+  background: white;
+  border: 3px solid #e9ebec;
+  border-radius: 48px;
+
+  &__tw {
+    background: url('../img/icon_tw.png') no-repeat 50% 50%;
+  }
+
+  &__fb {
+    background: url('../img/icon_fb.png') no-repeat 50% 50%;
+  }
+
+  &__yt {
+    background: url('../img/icon_yt.png') no-repeat 50% 50%;
+  }
+}
