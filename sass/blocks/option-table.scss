@@ -1,0 +1,208 @@
+//
+//
+// Таблица с тарифами
+
+.option-table {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 99px;
+  background: #fff url('../img/bg_grey.png') no-repeat 50% 0;
+
+  &__table {
+    display: block;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    text-transform: uppercase;
+  }
+
+  & tbody {
+    display: block;
+  }
+
+  &__row {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 2px solid #e5e5e5;
+    background: white;
+  }
+
+  &__row:first-child {
+    display: block;
+    border-bottom: none;
+    text-align: center;
+
+    background: $text-color;
+    color: white;
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__top-cell {
+    display: none;
+    padding-top: 19px;
+    padding-bottom: 25px;
+  }
+
+  &__top-cell:nth-child(3) {
+    display: block;
+    position: relative;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  &__top-cell:nth-child(3)::before {
+    content: "";
+
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 74px;
+    height: 73px;
+
+    background: url('../img/promo_popular.png') no-repeat 50% 50%;
+  }
+
+  &__simple-cell {
+    display: none;
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+
+  &__left-cell {
+    display: flex;
+    padding-left: 22px;
+    padding-top: 19px;
+    padding-bottom: 18px;
+    border-left: 2px solid #e5e5e5;
+    font-size: $font-size;
+    color: $text-color;
+  }
+
+  &__simple-cell:nth-child(3) {
+    display: flex;
+    padding-right: 18px;
+    border-right: 2px solid #e5e5e5;
+  }
+
+  &__price {
+    display: block;
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+
+
+  &__controls-wrap {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 140px;
+    height: 14px;
+    margin-left: -70px;   // Для центровки
+    text-align: center;
+    z-index: 10;
+  }
+
+  &__control {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+    background: #b5b9be;
+    border: 3px solid #f2f2f2;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__control--active {
+    background-color: #fff;
+    border-color: $text-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .option-table {
+    padding-top: 90px;
+    padding-bottom: 68px;
+    background: #fff url('../img/bg_grey-tablet.png') no-repeat 50% 0;
+    text-align: center;
+
+    &__table {
+      @include container--tablet();
+      display: table;
+    }
+
+    & tbody {
+      display: table-row-group;
+    }
+
+    &__row {
+      width: auto;
+      margin: auto;
+      display: table-row;
+      border: none;
+    }
+
+    &__row:first-child {
+      display: table-row;
+      background: $text-color;
+      font-size: $font-size + 2px;
+    }
+
+    &__top-cell {
+      display: table-cell;
+      padding: 14px 28px 11px 42px;
+    }
+
+    &__top-cell:first-child {
+      background: #f2f2f2;
+      border: none;
+    }
+
+    &__top-cell:nth-child(3) {
+      display: table-cell;
+      border: 2px solid #e5e5e5;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &__top-cell:nth-child(3)::before {
+      left: 0px
+    }
+
+    &__simple-cell {
+      display: table-cell;
+      padding: 10px 0;
+      border: 2px solid #e5e5e5;
+      border-top: none;
+      //border-bottom: none;
+    }
+
+    &__left-cell {
+      display: table-cell;
+      padding: 10px 25px 10px 15px;
+      border: 2px solid #e5e5e5;
+      font-size: $font-size;
+      text-transform: none;
+    }
+
+    &__simple-cell:nth-child(3) {
+      display: table-cell;
+      padding: 0;
+      border: 2px solid #e5e5e5;
+      border-top: none;
+    }
+
+    &__price {
+      font-size: $font-size + 4px;
+    }
+
+    &__controls-wrap {
+      display: none;
+    }
+  }
+}

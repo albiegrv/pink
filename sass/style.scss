@@ -6,7 +6,7 @@
 
 @import "layout/base.scss";
 
-@import "layout/header.scss";
+@import "layout/main-header.scss";
 
 @import "blocks/page-title.scss";
 
@@ -16,10 +16,24 @@
 
 @import "blocks/review-slider.scss";
 
-@import "blocks/option-slider.scss";
+@import "blocks/option-table.scss";
 
 @import "blocks/form.scss";
 
+@import "blocks/fieldset-name.scss";
+
+@import "blocks/fieldset-app.scss";
+
+@import "blocks/fieldset-date.scss";
+
+@import "blocks/fieldset-travellers.scss";
+
+@import "blocks/fieldset-achieve.scss";
+
+@import "blocks/fieldset-photos.scss";
+
 @import "blocks/social-btn.scss";
 
-@import "layout/footer.scss";
+@import "blocks/promo24h.scss";
+
+@import "layout/main-footer.scss";

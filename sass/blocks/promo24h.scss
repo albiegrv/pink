@@ -1,0 +1,59 @@
+//
+//
+// Промо блок (действие 24 часа)
+
+.promo24h {
+  display: none;
+}
+
+@media (min-width: $screen_md) {
+  .promo24h {
+    display: block;
+    background: #fff;
+    padding-top: 100px;
+    margin-bottom: 129px;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__item {
+      width: 50%;
+      padding-left: 50%;
+      text-align: left;
+    }
+
+    &__title {
+      width: 170px;
+      margin-bottom: 18px;
+
+      font-size: $font-size + 16px;
+      line-height: $line-height + 12px;
+      font-family: $font-stack;
+      font-weight: $weight-bold;
+
+      color: black;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 15px;
+
+      font-size: $font-size;
+      line-height: $line-height;
+      font-family: $font-stack;
+      font-weight: $weight-normal;
+
+      color: $text-color;
+    }
+
+    &__link {
+      font-size: $font-size;
+      line-height: $line-height;
+      font-family: $font-stack;
+      font-weight: $weight-normal;
+
+      color: $pink-color;
+    }
+  }
+}

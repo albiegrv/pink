@@ -3,17 +3,20 @@
 // Блок загрузки приложения
 
 .download-app {
-  @include container(); // Центровка и ширина
   padding-top: 28px;
   padding-bottom: 30px;
 
   background: $bg-dark;
   text-align: center;
 
+  &__inner {
+    @include container(); // Центровка и ширина
+  }
+
   &__btn {
     display: block;
     margin-bottom: 30px;
-    padding: 15px 0;
+    padding: 15px 35px;
     border: 3px solid #fff;
     border-radius: 50px;
 
@@ -37,7 +40,7 @@
 
   &__sys-logo {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 35px;
     width: 50px;
   }
 
@@ -52,4 +55,34 @@
     font-family: $font-stack;
     font-weight: $weight-light;
   }
+}
+
+@media (min-width: $screen_md) {
+  .download-app {
+    padding-top: 0;
+    padding-bottom: 100px;
+    background: none;
+    text-align: left;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__btn {
+      display: inline-block;
+      margin-bottom: 45px;
+    }
+
+    &__sys-logos {
+      margin-bottom: 40px;
+      width: 300px;
+    }
+
+    &__info {
+      font-size: $font-size + 4px;
+      text-align: center;
+      width: 300px;
+    }
+  }
+
 }

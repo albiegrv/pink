@@ -1,10 +1,21 @@
 //
 //
-// Центровка и ширина
+// Контейнер для мобильной версии
 @mixin container() {
   width: 280px;
-  margin: 0 auto;
   padding: 0 20px;
+  // width: auto;     // Для резиновой сетки
+  // padding: 0 7%;   // Для резиновой сетки
+  margin: 0 auto;
+}
+
+//
+//
+// Контейнер для планшетной версии
+@mixin container--tablet() {
+  width: 620px;
+  padding: 0 40px;
+  margin: 0 auto;
 }
 
 

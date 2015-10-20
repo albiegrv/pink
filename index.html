@@ -63,19 +63,21 @@
 
 
       <div class="download-app">
-        <a class="download-app__btn" href="#">Скачать приложение</a>
-        <div class="download-app__sys-logos">
-          <div class="download-app__sys-logo">
-            <img src="img/icon_apple.png" width="46" height="57" alt="Apple logo">
+        <div class="download-app__inner">
+          <a class="download-app__btn" href="#">Скачать приложение</a>
+          <div class="download-app__sys-logos">
+            <div class="download-app__sys-logo">
+              <img src="img/icon_apple.png" width="46" height="57" alt="Apple logo">
+            </div>
+            <div class="download-app__sys-logo">
+              <img src="img/icon_android.png" width="42" height="47" alt="Android logo">
+            </div>
+            <div class="download-app__sys-logo">
+              <img src="img/icon_win.png" width="44" height="42" alt="Windows Logo">
+            </div>
           </div>
-          <div class="download-app__sys-logo">
-            <img src="img/icon_android.png" width="42" height="47" alt="Android logo">
-          </div>
-          <div class="download-app__sys-logo">
-            <img src="img/icon_win.png" width="44" height="42" alt="Windows Logo">
-          </div>
+          <p class="download-app__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-        <p class="download-app__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
 
 
@@ -88,23 +90,40 @@
 
       <section class="features">
 
-        <p class="features__info">Устали от серости мегаполиса?</p>
-        <p class="features__info">Нам есть, что вам предложить!</p>
+        <div class="features__inner">
 
-        <div class="features__item">
-          <h2 class="features__title">Поднимает настроение</h2>
-          <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </div>
-        <div class="features__item">
-          <h2 class="features__title">Меняет мир вокруг</h2>
-          <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
-        <div class="features__item">
-          <h2 class="features__title">Заводит новых друзей</h2>
-          <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          <p class="features__info">Устали от серости мегаполиса?</p>
+          <p class="features__info">Нам есть, что вам предложить!</p>
+
+          <div class="features__item">
+            <h2 class="features__title">Поднимает настроение</h2>
+            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="features__item">
+            <h2 class="features__title">Меняет мир вокруг</h2>
+            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="features__item">
+            <h2 class="features__title">Заводит новых друзей</h2>
+            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+
         </div>
 
       </section>
+
+
+      <div class="promo24h">
+        <div class="promo24h__inner">
+
+          <div class="promo24h__item">
+            <div class="promo24h__title">Эффект на 24 часа!</div>
+            <p class="promo24h__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="promo24h__link" href="#">Узнать больше об исследовании</a>
+          </div>
+
+        </div>
+      </div>
 
 
       <div class="review-slider">
@@ -118,6 +137,8 @@
         <div class="review-slider__slides-wrap">
           <div class="review-slider__slide">
             <div class="review-slider__author">Николай Петров</div>
+            <div class="review-slider__author-info">25 лет, водитель трамвая
+            </div>
             <div class="review-slider__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</div>
           </div>
         </div>
@@ -125,58 +146,57 @@
       </div>
 
 
-      <div class="option-slider">
+      <div class="option-table">
 
-        <div class="option-slider__controls-wrap">
-          <i class="option-slider__control"></i>
-          <i class="option-slider__control option-slider__control--active"></i>
-          <i class="option-slider__control"></i>
-        </div>
+        <table class="option-table__table">
+          <tr class="option-table__row">
+            <th class="option-table__top-cell"></th>
+            <th class="option-table__top-cell">База <span class="option-table__price">1.99 USD</span></th>
+            <th class="option-table__top-cell">Стандарт <span class="option-table__price">3.99 USD</span></th>
+            <th class="option-table__top-cell">Анлим <span class="option-table__price">9.99 USD</span></th>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Розовый фильтр</td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_yes.png" width="29" height="22" alt="+">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_yes.png" width="29" height="22" alt="+">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_yes.png" width="29" height="22" alt="+">
+            </td>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Смайлики</td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_no.png" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_yes.png" width="29" height="22" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_yes.png" width="29" height="22" alt="+">
+            </td>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Комментарии</td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_no.png" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_no.png" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/icon_no.png" width="26" height="26" alt="-">
+            </td>
+          </tr>
+        </table>
 
-        <div class="option-slider__options-wrap">
-
-          <div class="option-slider__option">
-
-            <div class="option-slider__header">
-              <div class="option-slider__header-inner">
-                <div class="option-slider__name">Стандарт</div>
-                <div class="option-slider__price">3,99 USD</div>
-              </div>
-            </div>
-
-            <div class="option-slider__item">
-              <div class="option-slider__item-inner">
-                <div class="option-slider__item-text">
-                  Розовый фильтр
-                </div>
-                <div class="option-slider__item-img">
-                  <img src="img/icon_yes.png" width="29" height="22" alt="+">
-                </div>
-              </div>
-            </div>
-            <div class="option-slider__item">
-              <div class="option-slider__item-inner">
-                <div class="option-slider__item-text">
-                  Смайлики
-                </div>
-                <div class="option-slider__item-img">
-                  <img src="img/icon_yes.png" width="29" height="22" alt="+">
-                </div>
-              </div>
-            </div>
-            <div class="option-slider__item">
-              <div class="option-slider__item-inner">
-                <div class="option-slider__item-text">
-                  Комментарии
-                </div>
-                <div class="option-slider__item-img">
-                  <img src="img/icon_no.png" width="26" height="26" alt="-">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
+        <div class="option-table__controls-wrap">
+          <i class="option-table__control"></i>
+          <i class="option-table__control option-table__control--active"></i>
+          <i class="option-table__control"></i>
         </div>
 
       </div>
@@ -189,27 +209,54 @@
     <footer class="main-footer">
 
 
-      <div class="main-footer__title">
+      <div class="main-footer__title--visible">
         <p class="main-footer__title-item">Остались вопросы?</p>
         <p class="main-footer__title-item">Свяжитесь с нами</p>
       </div>
 
-      <div class="main-footer__contacts">
-        <p class="main-footer__contacts-header">Звоните:</p>
-        <p class="main-footer__contacts-item">+7 (812) 555-66-66</p>
+      <div class="main-footer__contacts--visible">
+
+        <div class="main-footer__contacts-item">
+          <p class="main-footer__contacts-header">Звоните:</p>
+          <p class="main-footer__contacts-info">+7 (812) 555-66-66</p>
+        </div>
+
+        <div class="main-footer__contacts-item">
+          <p class="main-footer__contacts-header">Пишите:</p>
+          <p class="main-footer__contacts-info">mail@htmlacademy.ru</p>
+        </div>
+
+        <div class="main-footer__contacts-item">
+          <p class="main-footer__contacts-header">Приезжайте в гости:</p>
+          <p class="main-footer__contacts-info">ул. Большая Конюшенная, 19/8</p>
+        </div>
+
       </div>
 
-      <div class="main-footer__contacts">
-        <p class="main-footer__contacts-header">Пишите:</p>
-        <p class="main-footer__contacts-item">mail@htmlacademy.ru</p>
+      <div class="main-footer__map--visible">
+        <div class="main-footer_map-inner"></div>
       </div>
 
-      <div class="main-footer__contacts">
-        <p class="main-footer__contacts-header">Приезжайте в гости:</p>
-        <p class="main-footer__contacts-item">ул. Большая Конюшенная, 19/8</p>
-      </div>
+      <div class="main-footer__bottom--visible main-footer__bottom--index">
 
-      <div class="main-footer__map"></div>
+        <div class="main-footer__logo">
+          <a href="index.html">
+            <img src="img/logo_pink_footer.png" alt="Pink Logo" width="145" height="40">
+          </a>
+        </div>
+
+        <section class="main-footer__social">
+          <a href="#" class="social-btn social-btn__tw">Twitter</a>
+          <a href="#" class="social-btn social-btn__fb">Facebook</a>
+          <a href="#" class="social-btn social-btn__yt">YouTube</a>
+        </section>
+
+        <section class="main-footer__copyright">
+          <p>Разработано</p>
+          <a href="#">htmlacademy.ru</a>
+        </section>
+
+      </div>
 
 
     </footer>
