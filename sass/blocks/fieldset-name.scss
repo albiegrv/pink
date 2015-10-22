@@ -1,0 +1,39 @@
+//
+//
+// Блок формы с полями для ФИО
+
+.fieldset-name {
+  @include container();
+  padding-bottom: 25px;
+  border: none;
+
+  & label {
+    display: block;
+    padding-left: 23px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  & input[type="text"] {
+    display: block;
+    margin-bottom: 18px;
+    padding: 15px 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    color: $text-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .fieldset-name {
+    @include container--tablet();
+    padding-bottom: 42px;
+  }
+}

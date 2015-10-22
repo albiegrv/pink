@@ -1,0 +1,203 @@
+//
+//
+// Блок формы для ввода попутчиков
+
+.fieldset-travellers {
+  @include container();
+  border: none;
+
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+
+    font-size: $font-size;
+    line-height: $line-height - 6px;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__number {
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+
+    border-bottom: 2px solid #e5e5e5;
+    text-align: center;
+  }
+
+  &__number input[type="number"] {
+    display: block;
+    padding: 15px 20px;
+
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    background: #f2f2f2;
+    color: $text-color;
+  }
+
+  &__name {
+    margin-bottom: 18px;
+    font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
+  }
+
+  &__name label,
+  &__name span {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__name input[type="number"],
+  &__name input[type="text"] {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    vertical-align: top;
+    font-size: $font-size + 4px;
+
+    color: $text-color;
+  }
+
+  &__name input[type="number"] {
+    padding: 15px 5px 15px 20px;
+    width: 20%;
+    background: #f2f2f2;
+    border-right: none;
+  }
+
+  &__name input[type="text"] {
+    padding: 15px 20px;
+    width: 80%;
+  }
+
+  &__delete {
+    display: none;
+  }
+
+  &__nickname {
+    margin-bottom: 40px;
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__nickname label {
+    display: block;
+    padding-right: 115px;
+    margin-bottom: 7px;
+
+    font-size: $font-size;
+    text-transform: uppercase;
+
+    color: $pink-color;
+  }
+
+  &__nickname input[type="text"] {
+    display: inline-block;
+    padding: 15px 20px;
+
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    vertical-align: top;
+    font-size: $font-size + 4px;
+
+    color: $text-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+
+  .fieldset-travellers {
+    @include container--tablet();
+    padding: 0;
+    padding-bottom: 12px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__number {
+      position: relative;
+      padding-bottom: 41px;
+      padding-left: 58px;
+      border-bottom: none;
+      text-align: center;
+    }
+
+    &__number input[type="number"] {
+      display: block;
+      box-sizing: border-box;
+      width: 252px;
+
+      background: white;
+    }
+
+    &__number::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 58px;
+      width: 500px;
+
+      border: 1px solid #e5e5e5;
+    }
+
+    &__name {
+      padding-left: 58px;
+    }
+
+    &__name span {
+      margin-right: 68px;
+    }
+
+    &__name input[type="number"] {
+      width: 63px;
+      border-right: 2px solid #e5e5e5;
+      padding: 15px 5px 15px 25px;
+      margin-right: 20px;
+    }
+
+    &__name input[type="text"] {
+      width: 300px;
+      margin-right: 50px;
+    }
+
+    &__delete {
+      display: inline-block;
+      padding-top: 15px;
+      font-size: $font-size;
+      line-height: $line-height + 6px;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+
+    &__nickname {
+      margin-bottom: 40px;
+      padding-left: 141px;
+      text-align: left;
+    }
+
+    &__nickname label {
+      padding-left: 47px;
+    }
+
+    &__nickname input[type="text"] {
+      width: 300px;
+    }
+  }
+}
