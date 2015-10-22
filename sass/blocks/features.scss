@@ -1,37 +1,40 @@
 //
 //
-// Промо блок
+// Промо блок с преимуществами
 
 .features {
-  @include container();  // Центровка и ширина
   padding-top: 45px;
-  padding-bottom: 285px;
-  background: #fff url('../img/bg_features.png') no-repeat 100% 122%;
+  padding-bottom: 280px;
+  background: #fff url('../img/bg_grey.png') no-repeat 50% -30%;
   text-align: center;
+
+  &__inner {
+    @include container();  // Центровка и ширина
+  }
 
   &__info {
     margin: 0;
     margin-bottom: 45px;
 
     font-size: $font-size + 10px;
+    line-height: $font-size + 10px;
     font-family: $font-stack;
     font-weight: $weight-light;
 
     color: $text-color;
   }
 
-  &__info:nth-child(2) {  // Из-за съезжающего бэкграунда уменьшил
-    margin-bottom: 100px; // По макету 120px
+  &__info:nth-child(2) {
+    margin-bottom: 120px;
   }
 
   &__item {
-    padding-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 
     font-size: $h2-size;
     line-height: $line-height;
@@ -50,5 +53,35 @@
     font-weight: $weight-normal;
 
     color: $text-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 1px;
+    background: url('../img/bg_grey-tablet.png') no-repeat 50% -50%;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__info {
+      margin: 0 auto;
+      font-size: $font-size + 26px;
+      line-height: $font-size + 26px;
+    }
+
+    &__info:nth-child(2) {
+      margin-bottom: 130px;
+      width: 350px;
+    }
+
+    &__item {
+      width: 50%;
+      padding-left: 50%;
+      margin-bottom: 42px;
+      text-align: left;
+    }
   }
 }

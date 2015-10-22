@@ -57,10 +57,64 @@
     font-weight: $weight-bold;
   }
 
+  &__author-info {
+    display: none;
+  }
+
   &__text {
     font-size: $font-size;
     line-height: $line-height + 6px;
     font-family: $font-stack;
     font-weight: $weight-normal;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .review-slider {
+    @include container--tablet();
+    padding-top: 0;
+    padding-bottom: 75px;
+
+    &__controls-wrap {
+      bottom: 20px;
+    }
+
+    &__slide {
+      position: relative;
+      padding-bottom: 95px;
+    }
+
+    &__author {
+      position: absolute;
+      margin-bottom: 30px;
+      bottom: 0px;
+      left: 50%;
+      width: 180px;
+      margin-left: -90px;  // Для центровки
+      text-align: center;
+
+      font-size: $font-size + 6px;
+    }
+
+    &__author-info {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 180px;
+      margin-left: -90px;  // Для центровки
+      text-align: center;
+
+      font-size: $font-size;
+      line-height: $line-height + 6px;
+      font-family: $font-stack;
+      font-weight: $weight-normal;
+
+      color: $text-color;
+    }
+
+    &__text {
+      font-size: $font-size + 4px;
+    }
   }
 }

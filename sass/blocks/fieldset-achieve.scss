@@ -1,0 +1,76 @@
+//
+//
+// Блок формы для достижения (чекбоксы)
+
+.fieldset-achieve {
+  @include container();
+  margin-bottom: 3px;
+  border: none;
+
+  &__title {
+    margin-bottom: 42px;
+    text-align: center;
+
+    font-size: $font-size;
+    line-height: $line-height - 6px;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  &__item {
+    margin-bottom: 43px;
+  }
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  & label {
+    position: relative;
+    display: inline-block;
+    padding-left: 60px;
+
+    font-size: $font-size + 4px;
+    color: $text-color;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  & input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: 0px;
+  
+    width: 37px;
+    height: 37px;
+
+    background: white;
+    border-radius: 2px;
+    border: 2px solid #e5e5e5;
+  }
+
+  & input[type="checkbox"]:checked + label::before {
+    background: url('../img/icon_yes--pink.png') no-repeat 50% 50%;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .fieldset-achieve {
+    @include container--tablet();
+    padding: 0;
+    margin-bottom: 52px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    &__title {
+      margin-bottom: 56px;
+    }
+
+    &__item {
+      padding-left: 58px;
+      margin-bottom: 60px;
+    }
+  }
+}

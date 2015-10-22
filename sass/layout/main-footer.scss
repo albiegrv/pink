@@ -1,0 +1,249 @@
+//
+//
+// Стили для футера главной страницы 
+
+.main-footer {
+  padding-top: 45px;
+  background: #fff;
+  text-align: center;
+  font-family: $font-stack;
+  color: $text-color;
+
+  &--inner-page {
+    padding-top: 0;
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__title--visible {
+    @include container();
+    margin-bottom: 40px;
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+  &__title-item {
+    margin: 0;
+  }
+
+  &__title-item:first-child {
+    margin-bottom: 10px;
+  }
+
+  &__contacts {
+    display: none;
+  }
+
+  &__contacts-visible {
+    @include container();
+  }
+
+  &__contacts-item {
+    margin-bottom: 30px;
+  }
+
+  &__contacts-header {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__contacts-info {
+    margin: 0;
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+    color: $pink-color;
+  }
+
+  &__map {
+    display: none;
+  }
+
+  &__map--visible {
+    position: relative;
+    height: 220px;
+    z-index: 1;
+    background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
+  }
+
+  &__map-inner {
+    @include container();
+  }
+
+  &__map--visible::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 47px;
+    background: url('../img/mask_main-map-tablet.png') no-repeat 50% 100%;
+    background-size: 100%;
+  }
+
+  &__bottom {
+    display: none;
+  }
+
+  &__bottom--visible {
+    display: block;
+  }
+
+  &__bottom--index {  // Скрываем блок в футере главной страницы
+    display: none;    // Только в мобильной версии
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__logo img {
+    width: 145px;
+    height: 40px;
+  }
+
+  &__social {
+    margin-bottom: 40px;
+    font-size: 0;     // Убираем лишние пробелы у инлайн-блоков
+  }
+
+  &__copyright {
+    margin-bottom: 45px;
+    font-size: 0;     // Убираем лишние пробелу у инлайн-блоков
+  }
+
+  &__copyright p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 15px;
+
+    font-size: $font-size;
+    line-height: $line-height - 6px;
+    color: $text-color;
+  }
+
+  &__copyright a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 27px;
+    height: 34px;
+    background: white url('../img/logo_htmla.png') no-repeat 50% 50%;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .main-footer {
+    padding-top: 63px;
+
+    &--inner-page {
+      padding-top: 0;
+    }
+
+    &__title--visible {
+      @include container--tablet();
+      margin-bottom: 35px;
+      font-size: $font-size + 26px;
+    }
+
+    &__title-item {
+      margin: 0;
+      padding-bottom: 25px;
+    }
+
+    &__contacts--visible {
+      @include container--tablet();
+      position: relative;
+      z-index: 10;
+    }
+
+    &__contacts-item {
+      display: inline-block;
+      margin-bottom: 60px;
+    }
+
+    &__contacts-item:first-child {
+      margin-right: 100px;
+    }
+
+    &__contacts-item:last-child {
+      margin-bottom: 10px;
+    }
+
+    &__contacts-header {
+      margin-bottom: 8px;
+    }
+
+    &__map--visible {
+      height: 380px;
+      background: #f3f1ea url('../img/main-map-tablet.jpg') no-repeat 50% 60%;
+    }
+
+    &__map-inner {
+      @include container--tablet();
+    }
+
+    &__map--visible::before {
+      top: -30px;
+      height: 123px;
+      background: url('../img/mask_main-map-tablet.png') no-repeat 50% 100%;
+      background-size: 100%;
+    }
+
+    &__bottom--visible {
+      display: block;
+      @include container--tablet();
+      @include clearfix();
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
+
+    &__logo {
+      float: left;
+      width: 160px;
+      margin-bottom: 0;
+      margin-right: 60px;
+    }
+
+    &__social {
+      float: left;
+      width: 200px;
+      margin-bottom: 0;
+      font-size: 0;     // Убираем лишние пробелы у инлайн-блоков
+      text-align: center;
+    }
+
+    &__copyright {
+      float: right;
+      width: 140px;
+      padding-top: 10px;
+      margin-bottom: 0;
+      font-size: 0;     // Убираем лишние пробелу у инлайн-блоков
+    }
+
+    &__copyright p {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      margin-right: 15px;
+
+      font-size: $font-size;
+      line-height: $line-height - 6px;
+      color: $text-color;
+    }
+
+    &__copyright a {
+      display: inline-block;
+      vertical-align: middle;
+      width: 27px;
+      height: 34px;
+
+      background: white url('../img/logo_htmla.png') no-repeat 50% 50%;
+    }
+  }
+}

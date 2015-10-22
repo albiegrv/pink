@@ -3,12 +3,8 @@
 // Стили для хедера главной страницы 
 
 .main-header {
-  background: $bg-pic-header url('../img/bg_main_header.jpg') no-repeat 50% 0%;
+  background: $bg-pic-header url('../img/background-mobile@1x.jpg') no-repeat 50% 0%;
   color: #fff;
-
-  &--inner-page { // Фон для внутренних страниц
-    background-image: url('../img/bg_inner_header.jpg');
-  }
 
   &__nav-wrap {
     margin-bottom: 30px;
@@ -26,7 +22,7 @@
 
   &__logo-wrap {
     float: left;
-    width: 80px;
+    width: 150px;
   }
 
   &__toggle-wrap {
@@ -47,16 +43,52 @@
     top: 50;
   }
 
-  &__title {    // Для главной страницы
+  &__title {               // Элемент с заголовком для главной страницы
     @include container();  // Центровка и ширина
     padding-bottom: 320px;
     text-align: center;
   }
 
-  &__title--inner-page { // Блок с заголовком для внутренних страниц
+  &__title--inner-page {   // Для внутренних страниц
     padding-bottom: 60px;
   }
 
 }
 
 
+@media (min-width: $screen_md) {
+  .main-header {
+    background: $bg-pic-header url('../img/background-tablet@1x.jpg') no-repeat 50% 0%;
+
+    &__nav-wrap {
+      margin-bottom: 100px;
+    }
+
+    &__nav-wrap--inner-page {
+      margin-bottom: 90px;
+    }
+
+    &__top {
+      @include container--tablet();
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__menu {
+      @include container--tablet();
+    }
+
+    &__menu--visible {
+      // Доделать появляющееся меню
+    }
+
+    &__title {
+      @include container--tablet();
+      padding-bottom: 40px;
+    }
+
+    &__title--inner-page {
+      padding-bottom: 90px;
+    }
+  }
+}
