@@ -9,17 +9,41 @@
 @media (min-width: $screen_md) {
   .promo24h {
     display: block;
-    background: #fff;
-    padding-top: 100px;
-    margin-bottom: 129px;
+    background: white;
 
     &__inner {
       @include container--tablet();
+      @include clearfix();
+      padding-top: 100px;
+      padding-bottom: 129px;
+      background-image: url('../img/timer.svg');
+      background-repeat: no-repeat;
+      background-position: 10% 40%;
+      background-size: 262px auto;
+    }
+
+    &__timer {
+      float: left;
+      width: 192px;
+      height: 192px;
+      margin-top: 40px;
+      margin-left: 45px;
+      border: 10px solid $pink-color;
+      border-radius: 50%;
+      background-color: #eeeeee;
+
+      font-size: $font-size + 90px;
+      line-height: $line-height + 139px;
+      font-weight: $weight-bold;
+      font-family: $font-stack;
+      text-align: center;
+      color: $pink-color;
     }
 
     &__item {
+      float: right;
       width: 50%;
-      padding-left: 50%;
+      //padding-left: 50%;
       text-align: left;
     }
 
@@ -54,6 +78,57 @@
       font-weight: $weight-normal;
 
       color: $pink-color;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .promo24h {
+    background: #f2f2f2;
+
+    &__inner {
+      @include container--desktop();
+      padding-top: 170px;
+      padding-bottom: 110px;
+      background-position: left 40%;
+      background-size: 300px auto;
+    }
+
+    &__timer {
+      float: left;
+      width: 226px;
+      height: 226px;
+      margin-top: -35px;
+      margin-right: 95px;
+      margin-left: 15px;
+
+      font-size: $font-size + 106px;
+      line-height: $line-height + 162px;
+    }
+
+    &__item {
+      float: left;
+      width: 572px;
+      //padding-left: 45px;
+    }
+
+    &__title {
+      width: 300px;
+      margin-bottom: 30px;
+      line-height: $line-height + 6px;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 15px;
+
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+    }
+
+    &__link {
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
     }
   }
 }

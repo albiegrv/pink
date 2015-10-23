@@ -74,7 +74,7 @@
     }
 
     &__sys-logos {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
       width: 300px;
     }
 
@@ -84,5 +84,22 @@
       width: 300px;
     }
   }
+}
 
+@media (min-width: $screen_lg) {
+  .download-app {
+    padding-bottom: 124px;
+
+    &__inner {
+      @include container--desktop();
+    }
+
+    &__btn {
+      margin-bottom: 66px;
+    }
+
+    &__sys-logos {
+      margin-bottom: 61px;
+    }
+  }
 }

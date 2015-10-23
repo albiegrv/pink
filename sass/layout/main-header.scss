@@ -3,8 +3,19 @@
 // Стили для хедера главной страницы 
 
 .main-header {
-  background: $bg-pic-header url('../img/background-mobile@1x.jpg') no-repeat 50% 0%;
+  background-color: $bg-pic-header;
+  background-image: 
+    url('../img/iphone-hand-mobile.png'),
+    url('../img/background-mobile@1x.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 41%, 50% 0%;
   color: #fff;
+
+  &--inner-page {
+    background-image: url('../img/background-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+  }
 
   &__nav-wrap {
     margin-bottom: 30px;
@@ -15,9 +26,14 @@
   &__top {
     @include container();  // Центровка и ширина
     @include clearfix();   // Псевдораспорка для флоат-элементов
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 21px;
     position: relative;    // Вложен абсолютный элемент &__menu--visible
+  }
+
+  &__top--menu-visible {        // Когда раскрыто меню в мобильной и 
+    background: $text-color;    // планшетной версиях
+    border-bottom: 1px solid #000101;
+    padding: 24px;
   }
 
   &__logo-wrap {
@@ -28,19 +44,6 @@
   &__toggle-wrap {
     float: right;
     max-width: 70px;
-  }
-
-  &__menu {
-    @include container();
-    display: none;        // По дефолту навигация скрыта в гамбургере
-  }
-
-  &__menu--visible {      // НЕДОДЕЛАНО
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50;
   }
 
   &__title {               // Элемент с заголовком для главной страницы
@@ -58,7 +61,15 @@
 
 @media (min-width: $screen_md) {
   .main-header {
-    background: $bg-pic-header url('../img/background-tablet@1x.jpg') no-repeat 50% 0%;
+    background-image: url('../img/background-tablet@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+
+    &--inner-page {
+      background-image: url('../img/background-tablet@1x.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+  }
 
     &__nav-wrap {
       margin-bottom: 100px;
@@ -70,16 +81,8 @@
 
     &__top {
       @include container--tablet();
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    &__menu {
-      @include container--tablet();
-    }
-
-    &__menu--visible {
-      // Доделать появляющееся меню
+      padding-top: 42px;
+      padding-bottom: 42px;
     }
 
     &__title {
@@ -89,6 +92,53 @@
 
     &__title--inner-page {
       padding-bottom: 90px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .main-header {
+    background-image: 
+      url('../img/iphone-hand-desktop@1x.png'), 
+      url('../img/background-fullsize.jpg');
+    background-position: bottom, 50% 0%;
+    background-size: auto, 100% 100%;
+
+    &--inner-page {
+      background-image: url('../img/background-fullsize.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      background-size: 100%, 100%;
+  }
+
+    &__nav-wrap {
+      margin-bottom: 130px;
+    }
+
+    &__nav-wrap--inner-page {
+      margin-bottom: 85px;
+    }
+
+    &__top {
+      @include container--desktop();
+    }
+
+    &__logo-wrap {
+      padding-top: 45px;
+      padding-bottom: 40px;
+    }
+
+    &__toggle-wrap {
+      display: none;
+    }
+
+    &__title {
+      @include container--desktop();
+      padding-bottom: 63px;
+    }
+
+    &__title--inner-page {
+      padding-bottom: 112px;
     }
   }
 }

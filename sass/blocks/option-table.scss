@@ -128,7 +128,7 @@
   .option-table {
     padding-top: 90px;
     padding-bottom: 68px;
-    background: #fff url('../img/bg_grey-tablet.png') no-repeat 50% 0;
+    background-image: url('../img/bg_grey-tablet.png');
     text-align: center;
 
     &__table {
@@ -179,7 +179,6 @@
       padding: 10px 0;
       border: 2px solid #e5e5e5;
       border-top: none;
-      //border-bottom: none;
     }
 
     &__left-cell {
@@ -203,6 +202,41 @@
 
     &__controls-wrap {
       display: none;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .option-table {
+    padding-top: 150px;
+    padding-bottom: 95px;
+    background-image: url('../img/bg_grey-fullsize.png');
+    //text-align: center;
+
+    &__table {
+      @include container--desktop();
+    }
+
+    &__row:first-child {
+      font-size: $font-size + 4px;
+    }
+
+    &__top-cell {
+      padding: 14px 28px 11px 42px;
+    }
+
+    &__simple-cell {
+      padding: 10px 0;
+    }
+
+    &__left-cell {
+      padding: 10px 25px 10px 15px;
+      font-size: $font-size + 4px;
+    }
+
+
+    &__price {
+      font-size: $font-size + 10px;
     }
   }
 }
