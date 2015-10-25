@@ -81,3 +81,29 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+
+  .fieldset-date {
+    @include container--desktop();
+    padding: 0;
+    margin-bottom: 52px;
+
+    &__items {
+      @include clearfix();
+    }
+
+    &__item {
+      float: left;
+      width: 242px;
+      padding-left: 58px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &__item:nth-child(2) {
+      padding-left: 58px;
+      margin-right: 0;
+    }
+  }
+}

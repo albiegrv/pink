@@ -33,6 +33,7 @@
     font-weight: $weight-bold;
     color: $text-color;
     background: white;
+    text-transform: uppercase;
   }
 
   &__photos {
@@ -55,13 +56,13 @@
     content: "";
 
     position: absolute;
-    right: -15px;
-    top: -15px;
-    width: 30px;
-    height: 30px;
+    right: -14px;
+    top: -14px;
+    width: 28px;
+    height: 28px;
 
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); // По макету как будто бордер
-    border-radius: 28px;                    // Но так выглядит лучше
+    border-radius: 50%;                     // Но так выглядит лучше
     background: white url('../img/icon_cross.png') no-repeat 50% 50%;
     cursor: pointer;
   }
@@ -83,7 +84,6 @@
   .fieldset-photos {
     @include container--tablet();
     padding: 0;
-    margin-bottom: 65px;
     border: 2px solid #e5e5e5;
     border-radius: 2px;
 
@@ -130,15 +130,48 @@
       top: -25px;
       width: 50px;
       height: 50px;
-
-      //box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); // По макету как будто бордер
-      //border-radius: 28px;                    // Но так выглядит лучше
       background: white url('../img/icon_cross.png') no-repeat 50% 50%;
     }
 
     &__photo img {  // На всякий случай
       width: 120px;
       height: 120px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+
+  .fieldset-photos {
+    @include container--desktop();
+    padding: 0;
+
+    &__upload-photo button {
+      width: 820px;
+      background: $pink-color;
+      border: $pink-color;
+      color: white;
+    }
+
+    &__upload-photo::after {
+      width: 820px;
+    }
+
+    &__photos {
+      padding-bottom: 30px;
+    }
+
+    &__photo {
+      margin-right: 55px;
+      margin-bottom: 25px;
+    }
+
+    &__photo:nth-child(3n) {
+      margin-right: 55px;
+    }
+
+    &__photo:nth-child(5n) {
+      margin-right: 0;  // Обнуляем правый маргин у каждой 5-й фотки
     }
   }
 }

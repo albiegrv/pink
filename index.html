@@ -17,7 +17,7 @@
 
       <div class="main-header__nav-wrap">
 
-        <div class="main-header__top main-header__top--menu-visible">
+        <div class="main-header__top">
 
           <div class="main-header__logo-wrap">
             <a class="main-header__logo-link" href="index.html">
@@ -31,23 +31,19 @@
             </a>
           </div>
 
-        </div>
-
-        <div class="main-header__menu">
-
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="#">Информация</a>
+                <a class="main-nav__link" href="#">Информация</a>
               </li>
               <li class="main-nav__item">
-                <a href="blog.html">Блог</a>
+                <a class="main-nav__link" href="blog.html">Блог</a>
               </li>
               <li class="main-nav__item">
-                <a href="#">Отзывы</a>
+                <a class="main-nav__link" href="#">Отзывы</a>
               </li>
               <li class="main-nav__item">
-                <a href="form.html">Конкурс</a>
+                <a class="main-nav__link" href="form.html">Конкурс</a>
               </li>
             </ul>
           </nav>
@@ -90,31 +86,38 @@
 
       <section class="features">
 
-        <div class="features__inner">
+        <div class="features__preview-wrap">
 
-          <p class="features__info">Устали от серости мегаполиса?</p>
-          <p class="features__info">Нам есть, что вам предложить!</p>
-
-          <div class="features__item">
-            <h2 class="features__title">Поднимает настроение</h2>
-            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </div>
-          <div class="features__item">
-            <h2 class="features__title">Меняет мир вокруг</h2>
-            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
-          <div class="features__item">
-            <h2 class="features__title">Заводит новых друзей</h2>
-            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </div>
+          <p class="features__preview">Устали от серости мегаполиса?</p>
+          <p class="features__preview">Нам есть, что вам предложить!</p>
 
         </div>
+
+        <div class="features__items-wrap">
+            <div class="features__item">
+              <h2 class="features__title">Поднимает настроение</h2>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features__title">Меняет мир вокруг</h2>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features__title">Заводит новых друзей</h2>
+              <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </div>
+        </div>
+
 
       </section>
 
 
       <div class="promo24h">
         <div class="promo24h__inner">
+
+          <div class="promo24h__timer">
+            24
+          </div>
 
           <div class="promo24h__item">
             <div class="promo24h__title">Эффект на 24 часа!</div>
@@ -132,6 +135,14 @@
           <i class="review-slider__control review-slider__control--active"></i>
           <i class="review-slider__control"></i>
           <i class="review-slider__control"></i>
+        </div>
+
+        <div class="review-slider__arrow review-slider__arrow--left">
+          
+        </div>
+
+        <div class="review-slider__arrow review-slider__arrow--right">
+          
         </div>
 
         <div class="review-slider__slides-wrap">
@@ -233,9 +244,7 @@
 
       </div>
 
-      <div class="main-footer__map--visible">
-        <div class="main-footer_map-inner"></div>
-      </div>
+      <div class="main-footer__map--visible"></div>
 
       <div class="main-footer__bottom--visible main-footer__bottom--index">
 

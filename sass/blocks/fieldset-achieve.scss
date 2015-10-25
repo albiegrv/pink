@@ -74,3 +74,23 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+  .fieldset-achieve {
+    @include container--desktop();
+    @include clearfix();
+    padding: 0;
+    margin-bottom: 52px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      float: left;
+      width: 260px;
+      padding-left: 0;
+      margin-left: 53px;
+    }
+  }
+}

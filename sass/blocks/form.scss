@@ -15,7 +15,7 @@
 
   text-align: center;
   background: #fff;
-  color: black;
+  color: $text-color;
 
   font-size: $font-size;
   }
@@ -73,7 +73,11 @@
     color: $text-color;
   }
 
-  &__submit-block span {
+  &__fill {
+    display: none;
+  }
+
+  &__star {
     color: $pink-color;
   }
 }
@@ -129,8 +133,30 @@
 
     &__submit-block p {
       float: right;
-      max-width: 220px;
+      max-width: 320px;
       padding-top: 15px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+
+  .form {
+
+    &__info {
+    @include container--desktop();  // Центровка и ширина
+    width: 780px;
+    padding-bottom: 68px;
+    }
+
+    &__submit-block {
+      @include container--desktop();
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    &__fill {
+      display: inline;
     }
   }
 }
