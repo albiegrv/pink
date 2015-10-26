@@ -220,15 +220,15 @@
 
           <div class="fieldset-name__item">
             <label for="name-field">Имя: *</label>
-            <input type="text" name="name" placeholder="Введите ваше имя" id="name-field">
+            <input class="input-text" type="text" name="name" placeholder="Введите ваше имя" id="name-field">
           </div>
           <div class="fieldset-name__item">
             <label for="surname-field">Фамилия: *</label>
-            <input type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
+            <input class="input-text" type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
           </div>
           <div class="fieldset-name__item">
             <label for="patronymic-field">Отчество:</label>
-            <input type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
+            <input class="input-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
           </div>
 
         </fieldset>
@@ -263,15 +263,21 @@
           <div class="fieldset-date__items">
 
             <div class="fieldset-date__item">
-              <input type="text" name="departure-date" value="" placeholder="1 апреля 2015" id="departure-date-field">
+              <input class="input-date" type="date" name="departure-date" id="departure-date-field">
               <label for="departure-date-field">Дата выезда</label>
             </div>
-            <div class="fieldset-date__item">
-              <input type="number" name="trip-duration" value="" placeholder="10 дней" id="trip-duration-field">
+
+            <div class="fieldset-date__item number-range">
+              <div>
+                <span class="number-range__minus">–</span>
+                <input type="number" min="1" max="99" name="trip-duration" placeholder="10 дней" id="trip-duration-field">
+                <span class="number-range__plus">+</span>
+              </div>
               <label for="trip-duration-field">Продолжительность</label>
             </div>
+
             <div class="fieldset-date__item">
-              <input type="text" name="return-date" value="" placeholder="11 апреля 2015" id="return-date-field" disabled>
+              <input class="input-date" type="date" name="return-date" id="return-date-field" disabled>
               <label for="return-date-field">Дата возвращения</label>
             </div>
 
@@ -285,8 +291,10 @@
 
             <legend class="fieldset-travellers__title">Количество попутчиков *</legend>
 
-            <div class="fieldset-travellers__number">
-              <input type="number" name="number-of-travellers" value="" placeholder="2 чел" id="number-of-travellers-field">
+            <div class="fieldset-travellers__number number-range number-range--travellers">
+              <span class="number-range__minus">–</span>
+              <input type="number" min="1" max="99" name="number-of-travellers" placeholder="2 чел" id="number-of-travellers-field">
+              <span class="number-range__plus">+</span>
             </div>
 
             <div class="fieldset-travellers__item">
@@ -297,14 +305,14 @@
                   <label for="travel-name-field1">Имя: *</label>
                 </div>
                 <div>
-                  <input type="number" name="num1" value="1" disabled>
-                  <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
+                  <input class="input-count" type="number" name="num1" value="1" disabled>
+                  <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
                   <div class="fieldset-travellers__delete">Удалить</div>
                 </div>
               </div>
               <div class="fieldset-travellers__nickname">
                 <label for="travel-nickname-field1">Прозвище:</label>
-                <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
+                <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
               </div>
 
             </div>
@@ -317,14 +325,14 @@
                   <label for="travel-name-field2">Имя: *</label>
                 </div>
                 <div>
-                  <input type="number" name="num1" value="2" disabled>
-                  <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
+                  <input class="input-count" type="number" name="num1" value="2" disabled>
+                  <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
                   <div class="fieldset-travellers__delete">Удалить</div>
                 </div>
               </div>
               <div class="fieldset-travellers__nickname">
                 <label for="travel-nickname-field2">Прозвище:</label>
-                <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
+                <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
               </div>
 
             </div>
@@ -561,7 +569,7 @@
 
 
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/range.js"></script>
 
 
 
