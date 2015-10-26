@@ -76,3 +76,22 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+  .fieldset-app {
+    @include container--desktop();
+    @include clearfix();
+    padding: 0; 
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      float: left;
+      width: 242px;
+      padding-left: 58;
+      margin-bottom: 62px;
+    }
+  }
+}

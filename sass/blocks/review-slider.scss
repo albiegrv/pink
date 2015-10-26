@@ -9,6 +9,7 @@
   padding-bottom: 90px;
   background: #fff;
   text-align: center;
+  color: $text-color;
 
   &__controls-wrap {
     position: absolute;
@@ -38,6 +39,10 @@
     border-color: $text-color;
   }
 
+  &__arrow {
+    display: none;
+  }
+
   //Можно реализовать слайдер на CSS
   //
   // &__slides-wrap {
@@ -55,6 +60,7 @@
     line-height: $line-height + 6px;
     font-family: $font-stack;
     font-weight: $weight-bold;
+    color: black;
   }
 
   &__author-info {
@@ -109,8 +115,81 @@
       line-height: $line-height + 6px;
       font-family: $font-stack;
       font-weight: $weight-normal;
+    }
 
-      color: $text-color;
+    &__text {
+      font-size: $font-size + 4px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .review-slider {
+
+    @include container--desktop();
+    padding-top: 190px;
+    padding-bottom: 34px;
+
+    &__controls-wrap {
+      display: none;
+    }
+
+    &__arrow {
+      display: block;
+      position: absolute;
+      bottom: 37%;
+      width: 60px;
+      height: 50px;
+      z-index: 10;
+
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    &__arrow--left {
+      left: 0;
+      background-image: url('../img/review-arrow-left.svg');
+    }
+
+    &__arrow--right {
+      right: 0;
+      background-image: url('../img/review-arrow-right.svg');
+    }
+
+
+    &__slide {
+      position: relative;
+      width: 685px;
+      padding-bottom: 100px;
+      margin: 0 auto;
+    }
+
+    &__slide::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -115px;
+      margin-left: -70px;
+
+      width: 140px;
+      height: 63px;
+
+      background: 
+        transparent url('../img/quotes.svg') no-repeat 50% 50%;
+    }
+
+    &__author {
+      width: 210px;
+      margin-left: -105px;  // Для центровки
+
+      font-size: $font-size + 10px;
+    }
+
+    &__author-info {
+      width: 228px;
+      margin-left: -114px;  // Для центровки
+      font-size: $font-size + 4px;
     }
 
     &__text {

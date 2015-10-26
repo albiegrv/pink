@@ -26,3 +26,17 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+  .page-title {
+    width: 235px;
+    margin-left: 36px;
+    font-size: $h1-size + 26px;
+    line-height: $h1-size + 26px;
+
+  &--inner-page {
+    width: 750px;
+    margin: 0 auto;
+    }
+  }
+}

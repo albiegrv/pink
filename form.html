@@ -12,12 +12,12 @@
 
 
 
-    <header class="main-header">
+    <header class="main-header main-header--inner-page">
 
 
       <div class="main-header__nav-wrap main-header__nav-wrap--inner-page">
 
-        <div class="main-header__top main-header__top--menu-visible">
+        <div class="main-header__top">
 
           <div class="main-header__logo-wrap">
             <a class="main-header__logo-link" href="index.html">
@@ -31,23 +31,19 @@
             </a>
           </div>
 
-        </div>
-
-        <div class="main-header__menu">
-
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="#">Информация</a>
+                <a class="main-nav__link" href="#">Информация</a>
               </li>
               <li class="main-nav__item">
-                <a href="blog.html">Блог</a>
+                <a class="main-nav__link" href="blog.html">Блог</a>
               </li>
               <li class="main-nav__item">
-                <a href="#">Отзывы</a>
+                <a class="main-nav__link" href="#">Отзывы</a>
               </li>
               <li class="main-nav__item">
-                <a href="form.html">Конкурс</a>
+                <a class="main-nav__link" href="form.html">Конкурс</a>
               </li>
             </ul>
           </nav>
@@ -75,15 +71,15 @@
 
         <fieldset class="fieldset-name">
 
-          <div>
+          <div class="fieldset-name__item">
             <label for="name-field">Имя: *</label>
             <input type="text" name="name" placeholder="Введите ваше имя" id="name-field">
           </div>
-          <div>
+          <div class="fieldset-name__item">
             <label for="surname-field">Фамилия: *</label>
             <input type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
           </div>
-          <div>
+          <div class="fieldset-name__item">
             <label for="patronymic-field">Отчество:</label>
             <input type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
           </div>
@@ -146,36 +142,44 @@
               <input type="number" name="number-of-travellers" value="" placeholder="2 чел" id="number-of-travellers-field">
             </div>
 
-            <div class="fieldset-travellers__name">
-              <div>
-                <span>№</span>
-                <label for="travel-name-field1">Имя: *</label>
+            <div class="fieldset-travellers__item">
+
+              <div class="fieldset-travellers__name">
+                <div>
+                  <span>№</span>
+                  <label for="travel-name-field1">Имя: *</label>
+                </div>
+                <div>
+                  <input type="number" name="num1" value="1" disabled>
+                  <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
+                  <div class="fieldset-travellers__delete">Удалить</div>
+                </div>
               </div>
-              <div>
-                <input type="number" name="num1" value="1" disabled>
-                <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
-                <div class="fieldset-travellers__delete">Удалить</div>
+              <div class="fieldset-travellers__nickname">
+                <label for="travel-nickname-field1">Прозвище:</label>
+                <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
               </div>
-            </div>
-            <div class="fieldset-travellers__nickname">
-              <label for="travel-nickname-field1">Прозвище:</label>
-              <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
+
             </div>
 
-            <div class="fieldset-travellers__name">
-              <div>
-                <span>№</span>
-                <label for="travel-name-field2">Имя: *</label>
+            <div class="fieldset-travellers__item">
+
+              <div class="fieldset-travellers__name">
+                <div>
+                  <span>№</span>
+                  <label for="travel-name-field2">Имя: *</label>
+                </div>
+                <div>
+                  <input type="number" name="num1" value="2" disabled>
+                  <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
+                  <div class="fieldset-travellers__delete">Удалить</div>
+                </div>
               </div>
-              <div>
-                <input type="number" name="num1" value="2" disabled>
-                <input type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
-                <div class="fieldset-travellers__delete">Удалить</div>
+              <div class="fieldset-travellers__nickname">
+                <label for="travel-nickname-field2">Прозвище:</label>
+                <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
               </div>
-            </div>
-            <div class="fieldset-travellers__nickname">
-              <label for="travel-nickname-field2">Прозвище:</label>
-              <input type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
+
             </div>
 
           </fieldset>
@@ -220,7 +224,7 @@
             <legend class="fieldset-photos__title">Ваши фотографии из поездки *</legend>
 
             <div class="fieldset-photos__upload-photo">
-              <button>ЗАГРУЗИТЬ ФОТО</button>
+              <button>Загрузить фото</button>
             </div>
 
             <div class="fieldset-photos__photos">
@@ -264,7 +268,7 @@
 
         <div class="form__submit-block">
           <input type="submit" value="ОТПРАВИТЬ ФОРМУ">
-          <p><span>*</span> – обязательные поля</p>
+          <p><span class="form__star">*</span> – обязательные <span class="form__fill">для заполнения </span>поля</p>
         </div>
 
       </form>
