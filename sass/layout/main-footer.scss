@@ -93,14 +93,23 @@
     display: none;    // Только в мобильной версии
   }
 
-  &__logo {
+  &__logo-wrap {
     margin-bottom: 40px;
   }
 
-  &__logo img {
-    width: 145px;
-    height: 40px;
+  &__logo {
+    // svg-лого для мобильной и планшетной
+    // версий по дефолту грузится оно
   }
+
+  &__logo-desktop { // svg-лого для десктопной версии
+    display: none;
+  }
+
+  // &__logo img {
+  //   width: 145px;
+  //   height: 40px;
+  // }
 
   &__social {
     margin-bottom: 40px;
@@ -128,7 +137,18 @@
     vertical-align: middle;
     width: 27px;
     height: 34px;
-    background: white url('../img/logo_htmla.png') no-repeat 50% 50%;
+  }
+
+  &__copyright-logo {
+    fill: $pink-color;
+  }
+
+  &__copyright-logo:hover {
+    fill: $text-color;
+  }
+
+  &__copyright-logo:active {
+    opacity: 0.3;
   }
 }
 
@@ -195,7 +215,7 @@
       padding-bottom: 35px;
     }
 
-    &__logo {
+    &__logo-wrap {
       float: left;
       width: 160px;
       margin-bottom: 0;
@@ -216,26 +236,6 @@
       padding-top: 10px;
       margin-bottom: 0;
       font-size: 0;     // Убираем лишние пробелу у инлайн-блоков
-    }
-
-    &__copyright p {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0;
-      margin-right: 15px;
-
-      font-size: $font-size;
-      line-height: $line-height - 6px;
-      color: $text-color;
-    }
-
-    &__copyright a {
-      display: inline-block;
-      vertical-align: middle;
-      width: 27px;
-      height: 34px;
-
-      background: white url('../img/logo_htmla.png') no-repeat 50% 50%;
     }
   }
 }
@@ -302,13 +302,21 @@
       padding-bottom: 70px;
     }
 
-    &__logo {
+    &__logo-wrap {
       margin-right: 220px;
+    }
+
+    &__logo {
+      display: none; // svg-лого для мобильной и планшетной
+                     // версий по дефолту грузится оно
+    }
+
+    &__logo-desktop { // svg-лого для десктопной версии
+      display: inline;
     }
 
     &__copyright {
       max-width: 160px;
-      //padding-top: 10px;
     }
 
     &__copyright p {

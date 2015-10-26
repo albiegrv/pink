@@ -31,6 +31,17 @@
     cursor: pointer;
   }
 
+  &__btn:hover {
+    color: $pink-color;
+    background: white;
+  }
+
+  &__btn:active {
+    color: $pink-color;
+    background: white;
+    opacity: 0.3;
+  }
+
   &__sys-logos {
     margin-bottom: 13px;
     vertical-align: center;

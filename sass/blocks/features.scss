@@ -9,7 +9,7 @@
   background-image: 
     url('../img/iphone-screen-mobile-3@1x.png'),
     url('../img/iphone-case-mobile@1x.png'),
-    url('../img/../img/bg_grey.png');
+    url('../img/bg_grey.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center bottom, center bottom, 50% -30%;
   background-size: 140px auto, 160px auto, auto;
@@ -67,12 +67,25 @@
   }
 }
 
+
+//
+// Телефон и изображение на его экране
+// для ретины
+@media (min-resolution: 1.5dppx) {
+  .features {
+    background-image: 
+      url('../img/iphone-screen-mobile-3@2x.png'),
+      url('../img/iphone-case-mobile@2x.png'),
+      url('../img/bg_grey.png');
+  }
+}
+
 @media (min-width: $screen_md) {
   .features {
     padding-top: 60px;
     padding-bottom: 1px;
     background-image:
-      url('../img/../img/bg_grey-tablet.png');
+      url('../img/bg_grey-tablet.png');
     background-repeat: no-repeat;
     background-position: 50% -60%;
     background-size: auto;
@@ -108,6 +121,16 @@
       padding-bottom: 42px;
       margin-bottom: 0;
       text-align: left;
+    }
+  }
+
+//
+// Телефон и изображение на его экране
+// для ретины
+  @media (min-resolution: 1.5dppx) {
+    .features__items-wrap {
+      background-image: 
+        url('../img/iphone-screen-tablet-3@2x.png');
     }
   }
 }
@@ -161,8 +184,10 @@
       width: 300px;
       height: 302px;
 
-      background: 
-        transparent url('../img/iphone-screen-desktop-1@1x.png') no-repeat 50% 50%;
+      background-color: transparent;
+      background-image: url('../img/iphone-screen-desktop-1@1x.png');
+      background-repeat: no-repeat;
+      background-size: 292px 302px;
     }
 
     &__item:nth-child(2)::before {
@@ -185,6 +210,26 @@
       width: 275px;
       font-size: $font-size + 4px;
       line-height: $line-height + 6px;
+    }
+  }
+
+  //
+  // 
+  // 3 картинки телефона для ретины
+  @media (min-resolution: 1.5dppx) {
+    .features__item::before {
+      background-image: 
+        url('../img/iphone-screen-desktop-1@2x.png');
+    }
+
+    .features__item:nth-child(2)::before {
+      background-image: 
+        url('../img/iphone-screen-desktop-2@2x.png');
+    }
+
+    .features__item:last-child::before {
+      background-image: 
+        url('../img/iphone-screen-desktop-3@2x.png');
     }
   }
 }

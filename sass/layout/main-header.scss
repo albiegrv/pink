@@ -9,6 +9,7 @@
     url('../img/background-mobile@1x.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: center 41%, 50% 0%;
+  background-size: 258px 286px, 700px auto;
   color: #fff;
 
   &--inner-page {
@@ -41,6 +42,18 @@
     width: 150px;
   }
 
+  &__logo { // svg-лого для мобильной версии
+            // по дефолту грузится оно
+  }
+
+  &__logo-tablet { // svg-лого для планшетной версии
+    display: none;
+  }
+
+  &__logo-desktop { // svg-лого для десктопной версии
+    display: none;
+  }
+
   &__toggle-wrap {
     float: right;
     max-width: 70px;
@@ -55,16 +68,33 @@
   &__title--inner-page {   // Для внутренних страниц
     padding-bottom: 60px;
   }
-
 }
 
 
+@media (min-resolution: 1.5dppx) {
+  .main-header {
+    background-image: 
+      url('../img/iphone-hand-mobile@2x.png'), // фон и рука с телефоном
+      url('../img/background-mobile@2x.jpg');  // для ретины
+
+    &--inner-page {
+      background-image: url('../img/background-mobile@2x.jpg');
+      background-size: 700px auto;
+  }
+  }
+}
+
+
+//
+//
+//Стили для планшетной версии
 @media (min-width: $screen_md) {
   .main-header {
     background-image: 
       url('../img/iphone-hand-tablet@1x.png'),
       url('../img/background-tablet@1x.jpg');
     background-position: bottom, 50% 0%;
+    background-size: 700px 545px, 1200px auto;
 
 
     &--inner-page {
@@ -83,8 +113,24 @@
 
     &__top {
       @include container--tablet();
-      padding-top: 42px;
+      padding-top: 27px;
       padding-bottom: 42px;
+    }
+
+    &__logo { // svg-лого для мобильной версии
+      display: none;
+  }
+
+    &__logo-tablet { // svg-лого для планшетной версии
+      display: inline;
+    }
+
+    &__logo-desktop { // svg-лого для десктопной версии
+      display: none;
+    }
+
+    &__toggle-wrap {
+      padding-top: 17px;
     }
 
     &__title {
@@ -96,20 +142,37 @@
       padding-bottom: 90px;
     }
   }
+
+  @media (min-resolution: 1.5dppx) {
+    .main-header {
+      background-image: 
+        url('../img/iphone-hand-tablet@2x.png'),  // фон и рука с телефоном
+        url('../img/background-tablet@2x.jpg');   // для ретины
+
+      &--inner-page {
+        background-image:
+          url('../img/background-tablet@2x.jpg');
+        background-size: 1200px auto;
+      }
+    }
+  }
 }
 
+//
+//
+//Стили для десктопной версии
 @media (min-width: $screen_lg) {
   .main-header {
     background-image: 
       url('../img/iphone-hand-desktop@1x.png'), 
       url('../img/background-fullsize.jpg');
-    background-size: auto, 100% 100%;
+    background-size: 1050px 645px, 100% 100%;
 
     &--inner-page {
       background-image: url('../img/background-fullsize.jpg');
       background-repeat: no-repeat;
       background-position: 50% 0%;
-      background-size: 100%, 100%;
+      background-size: 100% auto;
   }
 
     &__nav-wrap {
@@ -122,11 +185,20 @@
 
     &__top {
       @include container--desktop();
+      padding-top: 27px;
+      padding-bottom: 42px;
     }
 
-    &__logo-wrap {
-      padding-top: 45px;
-      padding-bottom: 40px;
+    &__logo { // svg-лого для мобильной версии
+      display: none;
+  }
+
+    &__logo-tablet { // svg-лого для планшетной версии
+      display: none;
+    }
+
+    &__logo-desktop { // svg-лого для десктопной версии
+      display: inline;
     }
 
     &__toggle-wrap {
@@ -140,6 +212,19 @@
 
     &__title--inner-page {
       padding-bottom: 112px;
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .main-header {
+      background-image: 
+        url('../img/iphone-hand-desktop@2x.png'),  // фон и рука с телефоном
+        url('../img/background-fullsize.jpg');   // для ретины
+
+      &--inner-page {
+        background-image:
+          url('../img/background-fullsize.jpg');
+      }
     }
   }
 }
