@@ -29,8 +29,17 @@
     width: 100%;
     border: 2px solid #e5e5e5;
     border-radius: 2px;
+    outline: none;
 
     color: $text-color;
+  }
+
+  & input[type="text"]:hover {
+    border-color: $text-color;
+  }
+
+  & input[type="text"]:focus {
+    border-color: $pink-color;
   }
 }
 

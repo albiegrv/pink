@@ -39,6 +39,14 @@
     color: $text-color;
   }
 
+  &__item input[type="text"]:hover {
+    border-color: $text-color;
+  }
+
+  &__item input[type="text"]:focus {
+    border-color: $pink-color;
+  }
+
   &__name {
     margin-bottom: 18px;
     font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
@@ -63,6 +71,7 @@
     box-sizing: border-box;
     border: 2px solid #e5e5e5;
     border-radius: 2px;
+    outline: none;
     vertical-align: top;
     font-size: $font-size + 4px;
 
@@ -109,6 +118,7 @@
     width: 80%;
     box-sizing: border-box;
     border: 2px solid #e5e5e5;
+    outline: none;
     border-radius: 2px;
     vertical-align: top;
     font-size: $font-size + 4px;
@@ -184,6 +194,17 @@
       line-height: $line-height + 6px;
       text-transform: uppercase;
       color: $text-color;
+      cursor: pointer;
+    }
+
+    &__delete:hover {
+      text-decoration: underline;
+      color: $pink-color;
+    }
+
+    &__delete:active {
+      text-decoration: none;
+      opacity: 0.3;
     }
 
     &__nickname {

@@ -52,7 +52,16 @@
   }
 
   & input[type="checkbox"]:checked + label::before {
-    background: url('../img/icon_yes--pink.png') no-repeat 50% 50%;
+    background: url('../img/yes--pink.svg') no-repeat 50% 50%;
+    background-size: 22px auto;
+  }
+
+  & input[type="checkbox"] + label:hover::before {
+    border-color: $text-color;
+  }
+
+  & input[type="checkbox"] + label:active::before {
+    border-color: $pink-color;
   }
 }
 
