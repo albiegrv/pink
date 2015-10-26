@@ -14,14 +14,22 @@
   border-radius: 48px;
 
   &__tw {
-    background: url('../img/icon_tw.png') no-repeat 50% 50%;
+    background: url('../img/twitter.svg') no-repeat 50% 50%;
   }
 
   &__fb {
-    background: url('../img/icon_fb.png') no-repeat 50% 50%;
+    background: url('../img/facebook.svg') no-repeat 50% 50%;
   }
 
   &__yt {
-    background: url('../img/icon_yt.png') no-repeat 50% 50%;
+    background: url('../img/youtube.svg') no-repeat 50% 50%;
+  }
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

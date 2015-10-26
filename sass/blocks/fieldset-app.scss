@@ -48,10 +48,16 @@
     width: 17px;
     height: 17px;
 
-    background: white;
-    border-radius: 38px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
     border: 10px solid white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    background: white;
+
+    // width: 37px;
+    // height: 37px;
+    // outline: 10px solid white;
+    // border: 2px solid #e5e5e5;
+    // border-radius: 50%;
   }
 
   & input[type="radio"]:checked + label::before {

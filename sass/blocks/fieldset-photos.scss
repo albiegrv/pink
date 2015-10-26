@@ -29,11 +29,22 @@
     width: 100%;
     border: 2px solid #e5e5e5;
     border-radius: 2px;
+    outline: none;
 
     font-weight: $weight-bold;
     color: $text-color;
     background: white;
     text-transform: uppercase;
+  }
+
+  &__upload-photo button:hover {
+    border-color: $text-color;
+  }
+
+  &__upload-photo button:active {
+    border-color: $text-color;
+    background: $text-color;
+    color: white;
   }
 
   &__photos {

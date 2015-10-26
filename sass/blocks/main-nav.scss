@@ -60,7 +60,7 @@
 
     &__item {
       display: inline-block;
-
+      margin-right: 70px;
       vertical-align: top;
 
       text-transform: none;
@@ -69,18 +69,23 @@
       font-weight: $weight-normal;
     }
 
-    &__link {
-      padding: 50px 30px;
-
-      //text-align: center;
-      //text-decoration: none;
-      border: none;
-      background: none;
-      //outline: 1px solid red;
+    &__item:last-child {
+      margin-right: 0;
     }
 
-    &__link:nth-child(4) {
-      padding-right: 0;
+    &__link {
+      padding: 17px 0px 8px 0px;
+      border: none;
+      background: none;
+    }
+
+    &__item:hover {
+      border-bottom: 1px solid white;
+    }
+
+    &__item:active {
+      opacity: 0.3;
+      border-bottom: none;
     }
   }
 }

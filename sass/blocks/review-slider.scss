@@ -34,12 +34,24 @@
     cursor: pointer;
   }
 
+  &__control:hover {
+    background: #7e868f;
+  }
+
+  &__control:active {
+    background: #e9ebec;
+  }
+
   &__control--active {
     background: #fff;
     border-color: $text-color;
   }
 
-  &__arrow {
+  &__control--active:hover {
+    background: #fff;
+  }
+
+  &__arrow-wrap {
     display: none;
   }
 
@@ -125,7 +137,6 @@
 
 @media (min-width: $screen_lg) {
   .review-slider {
-
     @include container--desktop();
     padding-top: 190px;
     padding-bottom: 34px;
@@ -134,29 +145,34 @@
       display: none;
     }
 
-    &__arrow {
+    &__arrow-wrap {
       display: block;
       position: absolute;
       bottom: 37%;
       width: 60px;
       height: 50px;
       z-index: 10;
-
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
     }
 
-    &__arrow--left {
+    &__arrow-wrap--left {
       left: 0;
-      background-image: url('../img/review-arrow-left.svg');
     }
 
-    &__arrow--right {
+    &__arrow-wrap--right {
       right: 0;
-      background-image: url('../img/review-arrow-right.svg');
     }
 
+    &__arrow {      // Стрелки у слайдера в svg
+      fill: #bec2c7;
+    }
+
+    &__arrow:hover {
+      fill: #7e868f;
+    }
+
+    &__arrow:active {
+      fill: #e9ebec;
+    }
 
     &__slide {
       position: relative;
