@@ -25,28 +25,6 @@
     text-align: center;
   }
 
-  &__number input[type="number"] {
-    display: block;
-    padding: 15px 20px;
-
-    text-align: center;
-    box-sizing: border-box;
-    width: 100%;
-    border: 2px solid #e5e5e5;
-    border-radius: 2px;
-
-    background: #f2f2f2;
-    color: $text-color;
-  }
-
-  &__item input[type="text"]:hover {
-    border-color: $text-color;
-  }
-
-  &__item input[type="text"]:focus {
-    border-color: $pink-color;
-  }
-
   &__name {
     margin-bottom: 18px;
     font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
@@ -63,31 +41,6 @@
     text-transform: uppercase;
 
     color: $pink-color;
-  }
-
-  &__name input[type="number"],
-  &__name input[type="text"] {
-    display: inline-block;
-    box-sizing: border-box;
-    border: 2px solid #e5e5e5;
-    border-radius: 2px;
-    outline: none;
-    vertical-align: top;
-    font-size: $font-size + 4px;
-
-    color: $text-color;
-  }
-
-  &__name input[type="number"] {
-    padding: 15px 5px 15px 20px;
-    width: 20%;
-    background: #f2f2f2;
-    border-right: none;
-  }
-
-  &__name input[type="text"] {
-    padding: 15px 20px;
-    width: 80%;
   }
 
   &__delete {
@@ -110,21 +63,6 @@
 
     color: $pink-color;
   }
-
-  &__nickname input[type="text"] {
-    display: inline-block;
-    padding: 15px 20px;
-
-    width: 80%;
-    box-sizing: border-box;
-    border: 2px solid #e5e5e5;
-    outline: none;
-    border-radius: 2px;
-    vertical-align: top;
-    font-size: $font-size + 4px;
-
-    color: $text-color;
-  }
 }
 
 @media (min-width: $screen_md) {
@@ -145,15 +83,7 @@
       padding-bottom: 41px;
       padding-left: 58px;
       border-bottom: none;
-      text-align: center;
-    }
-
-    &__number input[type="number"] {
-      display: block;
-      box-sizing: border-box;
-      width: 252px;
-
-      background: white;
+      text-align: left;
     }
 
     &__number::after {
@@ -175,15 +105,7 @@
       margin-right: 68px;
     }
 
-    &__name input[type="number"] {
-      width: 63px;
-      border-right: 2px solid #e5e5e5;
-      padding: 15px 5px 15px 25px;
-      margin-right: 20px;
-    }
-
     &__name input[type="text"] {
-      width: 300px;
       margin-right: 50px;
     }
 
@@ -215,10 +137,6 @@
 
     &__nickname label {
       padding-left: 47px;
-    }
-
-    &__nickname input[type="text"] {
-      width: 300px;
     }
   }
 }

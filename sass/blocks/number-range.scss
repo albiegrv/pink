@@ -1,0 +1,74 @@
+//
+//
+// Блок числового инпута с кнопками + и -
+
+.number-range {
+  font-size: 0;
+
+  & input[type="number"] {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    padding: 23px 20px 17px 15px;
+
+    box-sizing: border-box;
+    width: 160px;
+    border: 2px solid #e5e5e5;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: $text-color;
+    font-size: $font-size + 4px;
+    text-align: center;
+  }
+
+  &--travellers input[type="number"] {
+    background: #f2f2f2;
+  }
+
+  &__minus, &__plus {
+    display: inline-block;
+    vertical-align: top;
+    width: 46px;
+    padding: 17px 5px;
+    border: 2px solid #e5e5e5;
+
+    font-size: 50px;
+    color: $text-color;
+    cursor: pointer;
+  }
+
+  &__minus:hover, &__plus:hover {
+    border-color: $text-color;
+  }
+
+  &__minus:active, &__plus:active {
+    color: white;
+    background: $text-color;
+    border-color: $text-color;
+  }
+
+  &__minus {
+    padding-top: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .number-range {
+
+    & input[type="number"] {
+      width: 120px;
+    }
+
+    &--travellers input[type="number"] {
+      background: white;
+      border: none;
+      text-align: center;
+    }
+
+    &__minus, &__plus {
+      text-align: center;
+    }
+  }
+}
