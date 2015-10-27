@@ -1,0 +1,38 @@
+//
+//
+// Блок текстового инпута 
+
+.input-text {
+  display: block;
+  padding: 20px 22px 17px 22px;
+
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  outline: none;
+
+  font-size: $font-size + 4px;
+
+  color: $text-color;
+
+  &--travellers {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &:hover {
+    border-color: $text-color;
+  }
+
+  &:focus {
+    border-color: $pink-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .input-text--travellers {
+      width: 300px;
+    }
+}
