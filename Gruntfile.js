@@ -20,11 +20,11 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       }
-    }
+    },
 
     clean: {
       build: ["build"]
-    }
+    },
 
     sass: {
       style: {
@@ -34,13 +34,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // cmq: {
-    //   style: {
-    //     files: {
-    //       "build/css/style.css" : ["build/css/style.css"]
-    //     }
-    //   }
-    // }
+    cmq: {
+      style: {
+        files: {
+          "build/css/style.css" : ["build/css/style.css"]
+        }
+      }
+    },
 
     postcss: {
       options: {
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
           "build/css/style.min.css" : ["build/css/style.css"]
         }
       }
-    }
+    },
 
     imagemin: {
       images: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
           src: ["build/img/**/*.{png, jpg, gif, svg}"]
         }]
       }
-    }
+    },
 
     watch: {
       style: {
