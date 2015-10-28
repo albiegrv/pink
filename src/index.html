@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: pink</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 
 
 
-    <header class="main-header main-header--inner-page">
+    <header class="main-header">
 
 
-      <div class="main-header__nav-wrap main-header__nav-wrap--inner-page">
+      <div class="main-header__nav-wrap">
 
         <div class="main-header__top">
 
@@ -200,8 +199,27 @@
       </div>
 
 
-      <div class="main-header__title main-header__title--inner-page">
-        <h1 class="page-title page-title--inner-page">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      <div class="main-header__title">
+        <h1 class="page-title">Взгляните на жизнь иначе!</h1>
+      </div>
+
+
+      <div class="download-app">
+        <div class="download-app__inner">
+          <a class="download-app__btn" href="#">Скачать приложение</a>
+          <div class="download-app__sys-logos">
+            <div class="download-app__sys-logo">
+              <img src="img/apple-logo.svg" width="46" height="57" alt="Apple logo">
+            </div>
+            <div class="download-app__sys-logo">
+              <img src="img/android-logo.svg" width="42" height="47" alt="Android logo">
+            </div>
+            <div class="download-app__sys-logo">
+              <img src="img/microsoft-logo.svg" width="44" height="42" alt="Windows Logo">
+            </div>
+          </div>
+          <p class="download-app__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
 
 
@@ -212,236 +230,153 @@
     <main>
 
 
-      <form class="form" action="/echo" method="post">
+      <section class="features">
 
-        <div class="form__info">Поделитесь своей историей и получите шанс выйграть ценный приз – 1000 миль на вашу бонусную карту! <span class="form__please">Пожалуйста, заполните форму ниже:</span></div>
+        <div class="features__preview-wrap">
 
-        <fieldset class="fieldset-name">
-
-          <div class="fieldset-name__item">
-            <label for="name-field">Имя: *</label>
-            <input class="input-text" type="text" name="name" placeholder="Введите ваше имя" id="name-field">
-          </div>
-          <div class="fieldset-name__item">
-            <label for="surname-field">Фамилия: *</label>
-            <input class="input-text" type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
-          </div>
-          <div class="fieldset-name__item">
-            <label for="patronymic-field">Отчество:</label>
-            <input class="input-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
-          </div>
-
-        </fieldset>
-
-        <div class="form__app-choice">
-
-          <fieldset class="fieldset-app">
-
-            <legend class="fieldset-app__title">С каким приложением путешествовали? *</legend>
-
-            <div class="fieldset-app__item">
-              <input type="radio" name="app-choice" value="pink-ios" id="ios-field" checked>
-              <label for="ios-field">Pink для iOS</label>
-            </div>
-            <div class="fieldset-app__item">
-              <input type="radio" name="app-choice" value="pink-android" id="android-field">
-              <label for="android-field">Pink на Android</label>
-            </div>
-            <div class="fieldset-app__item">
-              <input type="radio" name="app-choice" value="pink-windows" id="windows-field">
-              <label for="windows-field">Windows Phone</label>
-            </div>
-
-          </fieldset>
+          <p class="features__preview">Устали от серости мегаполиса?</p>
+          <p class="features__preview">Нам есть, что вам предложить!</p>
 
         </div>
 
-        <fieldset class="fieldset-date">
-
-          <legend class="fieldset-date__title">Когда вы путешествовали? *</legend>
-
-          <div class="fieldset-date__items">
-
-            <div class="fieldset-date__item">
-              <input class="input-date" type="date" name="departure-date" id="departure-date-field">
-              <label for="departure-date-field">Дата выезда</label>
+        <div class="features__items-wrap">
+            <div class="features__item">
+              <h2 class="features__title">Поднимает настроение</h2>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </div>
-
-            <div class="fieldset-date__item number-range">
-              <div>
-                <span class="number-range__minus">–</span>
-                <input type="number" min="1" max="99" name="trip-duration" placeholder="10 дней" id="trip-duration-field">
-                <span class="number-range__plus">+</span>
-              </div>
-              <label for="trip-duration-field">Продолжительность</label>
+            <div class="features__item">
+              <h2 class="features__title">Меняет мир вокруг</h2>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </div>
-
-            <div class="fieldset-date__item">
-              <input class="input-date" type="date" name="return-date" id="return-date-field" disabled>
-              <label for="return-date-field">Дата возвращения</label>
+            <div class="features__item">
+              <h2 class="features__title">Заводит новых друзей</h2>
+              <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </div>
+        </div>
 
+
+      </section>
+
+
+      <div class="promo24h">
+        <div class="promo24h__inner">
+
+          <div class="promo24h__timer">
+            24
           </div>
 
-        </fieldset>
+          <div class="promo24h__item">
+            <div class="promo24h__title">Эффект на 24 часа!</div>
+            <p class="promo24h__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="promo24h__link" href="#">Узнать больше об исследовании</a>
+          </div>
 
-        <div class="form__travellers">
+        </div>
+      </div>
 
-          <fieldset class="fieldset-travellers">
 
-            <legend class="fieldset-travellers__title">Количество попутчиков *</legend>
+      <div class="review-slider">
 
-            <div class="fieldset-travellers__number number-range number-range--travellers">
-              <span class="number-range__minus">–</span>
-              <input type="number" min="1" max="99" name="number-of-travellers" placeholder="2 чел" id="number-of-travellers-field">
-              <span class="number-range__plus">+</span>
-            </div>
+        <div class="review-slider__controls-wrap">
+          <i class="review-slider__control review-slider__control--active"></i>
+          <i class="review-slider__control"></i>
+          <i class="review-slider__control"></i>
+        </div>
 
-            <div class="fieldset-travellers__item">
-
-              <div class="fieldset-travellers__name">
-                <div>
-                  <span>№</span>
-                  <label for="travel-name-field1">Имя: *</label>
-                </div>
-                <div>
-                  <input class="input-count" type="number" name="num1" value="1" disabled>
-                  <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
-                  <div class="fieldset-travellers__delete">Удалить</div>
-                </div>
-              </div>
-              <div class="fieldset-travellers__nickname">
-                <label for="travel-nickname-field1">Прозвище:</label>
-                <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
-              </div>
-
-            </div>
-
-            <div class="fieldset-travellers__item">
-
-              <div class="fieldset-travellers__name">
-                <div>
-                  <span>№</span>
-                  <label for="travel-name-field2">Имя: *</label>
-                </div>
-                <div>
-                  <input class="input-count" type="number" name="num1" value="2" disabled>
-                  <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
-                  <div class="fieldset-travellers__delete">Удалить</div>
-                </div>
-              </div>
-              <div class="fieldset-travellers__nickname">
-                <label for="travel-nickname-field2">Прозвище:</label>
-                <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
-              </div>
-
-            </div>
-
-          </fieldset>
+        <div class="review-slider__arrow-wrap review-slider__arrow-wrap--left">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+            <path class="review-slider__arrow" d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+          </svg>
 
         </div>
 
-        <fieldset class="fieldset-achieve">
-
-          <legend class="fieldset-achieve__title">Ваши безбашенные достижения в путешествии</legend>
-
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="selfie-field" name="selfie" checked>
-            <label for="selfie-field">Сделал селфи с акулой</label>
-          </div>
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="burned-field" name="burned" checked>
-            <label for="burned-field">Обгорел на пляже</label>
-          </div>
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="chuck-field" name="chuck">
-            <label for="chuck-field">Видел Чака Норриса</label>
-          </div>
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="souvenir-field" name="souvenir">
-            <label for="souvenir-field">Накупил сувениров</label>
-          </div>
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="tower-field" name="tower" checked>
-            <label for="tower-field">Удержал баню</label>
-          </div>
-          <div class="fieldset-achieve__item">
-            <input type="checkbox" id="destruction-field" name="destruction">
-            <label for="destruction-field">Разгромил отель</label>
-          </div>
-
-        </fieldset>
-
-        <div class="form__photos">
-
-          <fieldset class="fieldset-photos">
-
-            <legend class="fieldset-photos__title">Ваши фотографии из поездки *</legend>
-
-            <div class="fieldset-photos__upload-photo">
-              <button>Загрузить фото</button>
-            </div>
-
-            <div class="fieldset-photos__photos">
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-            </div>
-
-          </fieldset>
-
+        <div class="review-slider__arrow-wrap review-slider__arrow-wrap--right">
+          <svg class="review-slider__arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+            <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+          </svg>
         </div>
 
-        <div class="form__submit-block">
-          <input type="submit" value="ОТПРАВИТЬ ФОРМУ">
-          <p><span class="form__star">*</span> – обязательные <span class="form__fill">для заполнения </span>поля</p>
+        <div class="review-slider__slides-wrap">
+          <div class="review-slider__slide">
+            <div class="review-slider__author">Николай Петров</div>
+            <div class="review-slider__author-info">25 лет, водитель трамвая
+            </div>
+            <div class="review-slider__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</div>
+          </div>
         </div>
 
-      </form>
+      </div>
+
+
+      <div class="option-table">
+
+        <table class="option-table__table">
+          <tr class="option-table__row">
+            <th class="option-table__top-cell"></th>
+            <th class="option-table__top-cell">База <span class="option-table__price">1.99 USD</span></th>
+            <th class="option-table__top-cell">Стандарт <span class="option-table__price">3.99 USD</span></th>
+            <th class="option-table__top-cell">Анлим <span class="option-table__price">9.99 USD</span></th>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Розовый фильтр</td>
+            <td class="option-table__simple-cell">
+              <img src="img/yes.svg" width="29" height="22" alt="+">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/yes.svg" width="29" height="22" alt="+">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/yes.svg" width="29" height="22" alt="+">
+            </td>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Смайлики</td>
+            <td class="option-table__simple-cell">
+              <img src="img/no.svg" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/yes.svg" width="29" height="22" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/yes.svg" width="29" height="22" alt="+">
+            </td>
+          </tr>
+          <tr class="option-table__row">
+            <td class="option-table__left-cell">Комментарии</td>
+            <td class="option-table__simple-cell">
+              <img src="img/no.svg" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/no.svg" width="26" height="26" alt="-">
+            </td>
+            <td class="option-table__simple-cell">
+              <img src="img/no.svg" width="26" height="26" alt="-">
+            </td>
+          </tr>
+        </table>
+
+        <div class="option-table__controls-wrap">
+          <i class="option-table__control"></i>
+          <i class="option-table__control option-table__control--active"></i>
+          <i class="option-table__control"></i>
+        </div>
+
+      </div>
 
 
     </main>
 
 
 
-    <footer class="main-footer main-footer--inner-page">
+    <footer class="main-footer">
 
 
-      <div class="main-footer__title">
+      <div class="main-footer__title--visible">
         <p class="main-footer__title-item">Остались вопросы?</p>
         <p class="main-footer__title-item">Свяжитесь с нами</p>
       </div>
 
-      <div class="main-footer__contacts">
+      <div class="main-footer__contacts--visible">
 
         <div class="main-footer__contacts-item">
           <p class="main-footer__contacts-header">Звоните:</p>
@@ -460,9 +395,9 @@
 
       </div>
 
-      <div class="main-footer__map"></div>
+      <div class="main-footer__map--visible"></div>
 
-      <div class="main-footer__bottom--visible">
+      <div class="main-footer__bottom--visible main-footer__bottom--index">
 
         <div class="main-footer__logo-wrap">
           <a href="index.html">
@@ -568,8 +503,8 @@
     </footer>
 
 
-    <script src="js/senddata.js"></script>
-    <script src="js/range.js"></script>
+
+    <!-- <script src="js/script.js"></script> -->
 
 
 
