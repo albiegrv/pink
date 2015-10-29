@@ -24,6 +24,7 @@
     background: rgba(0, 0, 0, .3);
   }
 
+// Верхний блок хедера
   &__top {
     @include container();  // Центровка и ширина
     @include clearfix();   // Псевдораспорка для флоат-элементов
@@ -42,10 +43,6 @@
     width: 150px;
   }
 
-  &__logo { // svg-лого для мобильной версии
-            // по дефолту грузится оно
-  }
-
   &__logo-tablet { // svg-лого для планшетной версии
     display: none;
   }
@@ -54,9 +51,25 @@
     display: none;
   }
 
-  &__toggle-wrap {
+  &__toggle-wrap {  // обёртка для иконок бургера и крестика
     float: right;
     max-width: 70px;
+  }
+
+  &__burger--visible { // иконка гамбургера
+  display: inline;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__cross { // иконка крестика (по дефолту скрыта)
+    display: none;
+  }
+
+  &__cross--visible {  // иконка крестика
+    display: inline;        // появляется при открытии меню
   }
 
   &__title {               // Элемент с заголовком для главной страницы
