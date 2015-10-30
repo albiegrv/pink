@@ -5,9 +5,10 @@
 .input-count {
   display: inline-block;
   vertical-align: top;
+  text-align: center;
 
   box-sizing: border-box;
-  padding: 20px 5px 17px 20px;
+  padding: 15px 5px;
   width: 20%;
   border: 2px solid #e5e5e5;
   border-radius: 2px;
@@ -27,7 +28,7 @@
   .input-count {
     width: 63px;
     border-right: 2px solid #e5e5e5;
-    padding: 20px 5px 17px 25px;
+    padding: 15px 5px;
     margin-right: 20px;
   }
 }
