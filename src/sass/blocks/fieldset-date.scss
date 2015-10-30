@@ -10,22 +10,11 @@
   &__title {
     margin-bottom: 42px;
     text-align: center;
-
-    font-size: $font-size;
-    line-height: $line-height - 6px;
-    text-transform: uppercase;
-    color: $pink-color;
   }
 
   &__item {
     margin-bottom: 20px;
     text-align: center;
-  }
-
-  & label {
-    font-size: $font-size;
-    text-transform: uppercase;
-    color: $pink-color;
   }
 }
 
@@ -41,6 +30,8 @@
 
     &__title {
       margin-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     &__items {

@@ -1,0 +1,10 @@
+//
+//
+// Стили для розовых label и legend в форме
+
+.label-legend {
+    font-size: $font-size;
+    line-height: $line-height - 6px;
+    text-transform: uppercase;
+    color: $pink-color;
+}

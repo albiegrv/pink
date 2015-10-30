@@ -9,7 +9,7 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px;
-    padding: 23px 20px 17px 15px;
+    padding: 16px 20px;
 
     box-sizing: border-box;
     width: 160px;
@@ -26,16 +26,23 @@
     background: #f2f2f2;
   }
 
-  &__minus, &__plus {
+  &__minus, 
+  &__plus {
     display: inline-block;
     vertical-align: top;
     width: 46px;
-    padding: 17px 5px;
+    padding: 16px 5px;
     border: 2px solid #e5e5e5;
 
     font-size: 50px;
     color: $text-color;
     cursor: pointer;
+    background: white;
+  }
+
+    &__minus {
+    padding-top: 12px;
+    padding-bottom: 20px;
   }
 
   &__minus:hover, &__plus:hover {
@@ -46,11 +53,6 @@
     color: white;
     background: $text-color;
     border-color: $text-color;
-  }
-
-  &__minus {
-    padding-top: 14px;
-    padding-bottom: 20px;
   }
 }
 
