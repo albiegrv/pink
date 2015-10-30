@@ -23,38 +23,30 @@
   // Отлавливаем клик по плюсу
   plus.addEventListener("tap", function(event) {
     // Вызываем ф-цию c параметром для добавления
-    changeNumber(true);
-  });
+    var value = input.value;
 
-  //
-  // Отлавливаем клик по минусу
-  minus.addEventListener("tap", function(event) {
-    // Вызываем ф-цию с параметром для удаления
-    changeNumber(false);
+    // Вставляем в наш шаблон значения из input
+    var html = Mustache.render(template, {
+      "number": value
+    });
+
+    // Создаем элемент div, добавляем его на страницу, 
+    // Добавляем div'у класс и вставляем в него шаблон
+    var div = document.createElement("div");
+    div.classList.add("fieldset-travellers__item");
+    div.innerHTML = html;
+
+    // Добавляем div в конец нашего блока
+    area.appendChild(div);
+
+    minus.addEventListener("tap", function(event) {
+      removeTraveller(div);
+    });
   });
 
   //
   // Ф-ция изменения количества путешественников
-  function changeNumber(operation) {
-
-    if (operation) {
-      var value = input.value;
-
-      // Вставляем в наш шаблон значения из input
-      var html = Mustache.render(template, {
-        "number": value
-      });
-
-      // Создаем элемент div, добавляем его на страницу, 
-      // Добавляем div'у класс и вставляем в него шаблон
-      var div = document.createElement("div");
-      div.classList.add("fieldset-travellers__item");
-      div.innerHTML = html;
-
-      // Добавляем div в конец нашего блока
-      area.appendChild(div);
-    } else {
+  function removeTraveller(div) {
       div.parentNode.removeChild(div);
-    }
   }
 })();

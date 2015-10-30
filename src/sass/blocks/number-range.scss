@@ -9,7 +9,7 @@
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px;
-    padding: 23px 20px 17px 15px;
+    padding: 25px 20px 20px 15px;
 
     box-sizing: border-box;
     width: 160px;
@@ -31,17 +31,19 @@
     display: inline-block;
     vertical-align: top;
     width: 46px;
-    padding: 20px 5px;
+    padding: 25px 5px;
+    padding-bottom: 20px;
     border: 2px solid #e5e5e5;
 
     font-size: 50px;
     color: $text-color;
     cursor: pointer;
+    background: white;
   }
 
     &__minus {
-    padding-top: 16px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 25px;
   }
 
   &__minus:hover, &__plus:hover {
