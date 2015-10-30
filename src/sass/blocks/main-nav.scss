@@ -41,6 +41,14 @@
     border-bottom: 1px solid #000101;
     color: white;
   }
+
+  &__link:hover {
+    color: $pink-color;
+  }
+
+  &__link:active {
+    color: #5d354e;
+  }
 }
 
 @media (min-width: $screen_md) {
@@ -77,6 +85,14 @@
       padding: 17px 0px 8px 0px;
       border: none;
       background: none;
+    }
+
+    &__link:hover {
+      color: white;
+    }
+
+    &__link:active {
+      opacity: 0.3;
     }
 
     &__item:hover {

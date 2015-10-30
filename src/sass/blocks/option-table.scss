@@ -71,6 +71,11 @@
     padding-bottom: 18px;
   }
 
+  &__simple-cell img {
+    width: 29px;
+    height: 26px;
+  }
+
   &__left-cell {
     display: flex;
     padding-left: 22px;

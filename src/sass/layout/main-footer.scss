@@ -52,10 +52,21 @@
   }
 
   &__contacts-info {
-    margin: 0;
+    //margin: 0;
+    text-decoration: none;
     font-size: $font-size + 10px;
     font-weight: $weight-light;
     color: $pink-color;
+  }
+
+  &__contacts-info:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  &__contacts-info:active {
+    color: #ced0d2;
+    text-decoration: none;
   }
 
   &__map {
@@ -97,19 +108,17 @@
     margin-bottom: 40px;
   }
 
-  &__logo {
-    // svg-лого для мобильной и планшетной
-    // версий по дефолту грузится оно
+  &__logo-wrap:hover  .main-footer__logo-letter {
+    fill: $pink-color;
+  }
+
+  &__logo-wrap:active  .main-footer__logo-letter {
+    opacity: 0.3;
   }
 
   &__logo-desktop { // svg-лого для десктопной версии
     display: none;
   }
-
-  // &__logo img {
-  //   width: 145px;
-  //   height: 40px;
-  // }
 
   &__social {
     margin-bottom: 40px;
@@ -143,11 +152,11 @@
     fill: $pink-color;
   }
 
-  &__copyright-logo:hover {
+  &__copyright:hover .main-footer__copyright-logo {
     fill: $text-color;
   }
 
-  &__copyright-logo:active {
+  &__copyright:active .main-footer__copyright-logo {
     opacity: 0.3;
   }
 }
@@ -314,6 +323,14 @@
     &__logo-desktop { // svg-лого для десктопной версии
       display: inline;
     }
+
+    &__logo-wrap:hover  .main-footer__logo-desktop-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-wrap:active  .main-footer__logo-desktop-letter {
+      opacity: 0.3;
+  }
 
     &__copyright {
       max-width: 160px;

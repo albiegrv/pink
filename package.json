@@ -36,7 +36,9 @@
   },
   "devDependencies": {
     "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-imagemin": "^0.9.4"
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-minified": "0.0.6"
   }
 }

@@ -55,6 +55,11 @@
     width: 50px;
   }
 
+  &__sys-logo img {
+    width: 46px;
+    height: 57px;
+  }
+
   &__sys-logo:last-child {
     margin-right: 0;        // Убираем отступ у последнего элемента в ряду
   }

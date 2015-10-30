@@ -71,6 +71,10 @@
     opacity: 0.3;
   }
 
+  &__submit-block input[type="submit"]:disabled {
+    background: #e5e5e5;
+  }
+
   &__submit-block p {
     display: inline-block;
     margin: 0;

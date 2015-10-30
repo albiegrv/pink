@@ -43,6 +43,15 @@
     width: 150px;
   }
 
+  &__logo-link:hover .main-header__logo-letter {
+    fill: $pink-color;
+  }
+
+  &__logo-link:active .main-header__logo-letter {
+    fill: white;
+    opacity: 0.3;
+  }
+
   &__logo-tablet { // svg-лого для планшетной версии
     display: none;
   }
@@ -64,12 +73,28 @@
     display: none;
   }
 
+  &__toggle:hover .main-header__burger-part {
+    fill: $pink-color;
+  }
+
+  &__toggle:active .main-header__burger-part {
+    opacity: 0.3;
+  }
+
   &__cross { // иконка крестика (по дефолту скрыта)
     display: none;
   }
 
   &__cross--visible {  // иконка крестика
     display: inline;        // появляется при открытии меню
+  }
+
+  &__toggle:hover .main-header__cross-part {
+    fill: $pink-color;
+  }
+
+  &__toggle:active .main-header__cross-part {
+    opacity: 0.3;
   }
 
   &__title {               // Элемент с заголовком для главной страницы
@@ -109,7 +134,6 @@
     background-position: bottom, 50% 0%;
     background-size: 700px 545px, 1200px auto;
 
-
     &--inner-page {
       background-image: url('../img/background-tablet@1x.jpg');
       background-repeat: no-repeat;
@@ -136,6 +160,15 @@
 
     &__logo-tablet { // svg-лого для планшетной версии
       display: inline;
+    }
+
+    &__logo-link:hover .main-header__logo-tablet-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-link:active .main-header__logo-tablet-letter {
+      fill: white;
+      opacity: 0.3;
     }
 
     &__logo-desktop { // svg-лого для десктопной версии
@@ -212,6 +245,14 @@
 
     &__logo-desktop { // svg-лого для десктопной версии
       display: inline;
+    }
+
+    &__logo-link:hover .main-header__logo-desktop-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-link:active .main-header__logo-desktop-letter {
+      opacity: 0.3;
     }
 
     &__toggle-wrap {
