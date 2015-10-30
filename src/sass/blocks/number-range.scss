@@ -26,16 +26,22 @@
     background: #f2f2f2;
   }
 
-  &__minus, &__plus {
+  &__minus, 
+  &__plus {
     display: inline-block;
     vertical-align: top;
     width: 46px;
-    padding: 17px 5px;
+    padding: 20px 5px;
     border: 2px solid #e5e5e5;
 
     font-size: 50px;
     color: $text-color;
     cursor: pointer;
+  }
+
+    &__minus {
+    padding-top: 16px;
+    padding-bottom: 24px;
   }
 
   &__minus:hover, &__plus:hover {
@@ -46,11 +52,6 @@
     color: white;
     background: $text-color;
     border-color: $text-color;
-  }
-
-  &__minus {
-    padding-top: 14px;
-    padding-bottom: 20px;
   }
 }
 

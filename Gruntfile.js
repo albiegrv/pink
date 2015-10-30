@@ -93,10 +93,10 @@ module.exports = function(grunt) {
     "clean",
     "copy",
     "sass",
-    // "cmq",
+    "cmq",
     "postcss",
     "cssmin",
-    "imagemin",
+    //"imagemin",
     ]);
 
   config = require('./.gosha')(grunt, config);

@@ -131,15 +131,15 @@
         <fieldset class="fieldset-name">
 
           <div class="fieldset-name__item">
-            <label for="name-field">Имя: *</label>
+            <label class="label-legend" for="name-field">Имя: *</label>
             <input class="input-text" type="text" name="name" placeholder="Введите ваше имя" id="name-field">
           </div>
           <div class="fieldset-name__item">
-            <label for="surname-field">Фамилия: *</label>
+            <label class="label-legend" for="surname-field">Фамилия: *</label>
             <input class="input-text" type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
           </div>
           <div class="fieldset-name__item">
-            <label for="patronymic-field">Отчество:</label>
+            <label class="label-legend" for="patronymic-field">Отчество:</label>
             <input class="input-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
           </div>
 
@@ -149,7 +149,7 @@
 
           <fieldset class="fieldset-app">
 
-            <legend class="fieldset-app__title">С каким приложением путешествовали? *</legend>
+            <legend class="fieldset-app__title label-legend">С каким приложением путешествовали? *</legend>
 
             <div class="fieldset-app__item">
               <input type="radio" name="app-choice" value="pink-ios" id="ios-field" checked>
@@ -170,13 +170,13 @@
 
         <fieldset class="fieldset-date">
 
-          <legend class="fieldset-date__title">Когда вы путешествовали? *</legend>
+          <legend class="fieldset-date__title label-legend">Когда вы путешествовали? *</legend>
 
           <div class="fieldset-date__items">
 
             <div class="fieldset-date__item">
               <input class="input-date" type="date" name="departure-date" id="departure-date-field">
-              <label for="departure-date-field">Дата выезда</label>
+              <label class="label-legend" for="departure-date-field">Дата выезда</label>
             </div>
 
             <div class="fieldset-date__item number-range">
@@ -185,12 +185,12 @@
                 <input type="number" min="1" max="99" name="trip-duration" placeholder="10 дней" id="trip-duration-field">
                 <span class="number-range__plus">+</span>
               </div>
-              <label for="trip-duration-field">Продолжительность</label>
+              <label class="label-legend" for="trip-duration-field">Продолжительность</label>
             </div>
 
             <div class="fieldset-date__item">
               <input class="input-date" type="date" name="return-date" id="return-date-field" disabled>
-              <label for="return-date-field">Дата возвращения</label>
+              <label class="label-legend" for="return-date-field">Дата возвращения</label>
             </div>
 
           </div>
@@ -201,11 +201,11 @@
 
           <fieldset class="fieldset-travellers">
 
-            <legend class="fieldset-travellers__title">Количество попутчиков *</legend>
+            <legend class="fieldset-travellers__title label-legend">Количество попутчиков *</legend>
 
             <div class="fieldset-travellers__number number-range number-range--travellers">
               <span class="number-range__minus">–</span>
-              <input type="number" min="1" max="99" name="number-of-travellers" placeholder="2 чел" id="number-of-travellers-field">
+              <input type="number" min="1" max="99" name="number-of-travellers" value="1" placeholder="2 чел" id="number-of-travellers-field" disabled>
               <span class="number-range__plus">+</span>
             </div>
 
@@ -213,38 +213,18 @@
 
               <div class="fieldset-travellers__name">
                 <div>
-                  <span>№</span>
-                  <label for="travel-name-field1">Имя: *</label>
+                  <span class="label-legend">№</span>
+                  <label class="label-legend" for="travel-name-field1">Имя: *</label>
                 </div>
                 <div>
-                  <input class="input-count" type="number" name="num1" value="1" disabled>
+                  <input class="input-count" type="text" name="num1" value="1" disabled>
                   <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
                   <div class="fieldset-travellers__delete">Удалить</div>
                 </div>
               </div>
               <div class="fieldset-travellers__nickname">
-                <label for="travel-nickname-field1">Прозвище:</label>
+                <label class="label-legend" for="travel-nickname-field1">Прозвище:</label>
                 <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
-              </div>
-
-            </div>
-
-            <div class="fieldset-travellers__item">
-
-              <div class="fieldset-travellers__name">
-                <div>
-                  <span>№</span>
-                  <label for="travel-name-field2">Имя: *</label>
-                </div>
-                <div>
-                  <input class="input-count" type="number" name="num1" value="2" disabled>
-                  <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field2">
-                  <div class="fieldset-travellers__delete">Удалить</div>
-                </div>
-              </div>
-              <div class="fieldset-travellers__nickname">
-                <label for="travel-nickname-field2">Прозвище:</label>
-                <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field2">
               </div>
 
             </div>
@@ -275,7 +255,7 @@
           </div>
           <div class="fieldset-achieve__item">
             <input type="checkbox" id="tower-field" name="tower" checked>
-            <label for="tower-field">Удержал баню</label>
+            <label for="tower-field">Удержал башню</label>
           </div>
           <div class="fieldset-achieve__item">
             <input type="checkbox" id="destruction-field" name="destruction">
@@ -288,45 +268,15 @@
 
           <fieldset class="fieldset-photos">
 
-            <legend class="fieldset-photos__title">Ваши фотографии из поездки *</legend>
+            <legend class="fieldset-photos__title label-legend">Ваши фотографии из поездки *</legend>
 
             <div class="fieldset-photos__upload-photo">
               <button>Загрузить фото</button>
+              <input type="file" name="images" id="upload-photo" accept="image/*" multiple>
             </div>
 
             <div class="fieldset-photos__photos">
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
-              <div class="fieldset-photos__photo">
-                <img src="img/photo_uploaded.jpg" width="67" height="68" alt="Photo">
-                <span>IMG-1.JPG</span>
-              </div>
+
             </div>
 
           </fieldset>
@@ -479,13 +429,40 @@
 
     </footer>
 
+    <script id="image-template" type="text/html">
 
+        <img src="{{image}}" width="67" height="68" alt="{{name}}">
+        <span>{{name}}</span>
+        <a class="fieldset-photos__delete" href="#"></a>
+
+    </script>
+
+    <script id="traveller-template" type="text/html">
+
+        <div class="fieldset-travellers__name">
+          <div>
+            <span class="label-legend">№</span>
+            <label class="label-legend" for="travel-name-field1">Имя: *</label>
+          </div>
+          <div>
+            <input class="input-count" type="text" name="num{{number}}" value="{{number}}" disabled>
+            <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field{{number}}">
+            <div class="fieldset-travellers__delete">Удалить</div>
+          </div>
+        </div>
+        <div class="fieldset-travellers__nickname">
+          <label class="label-legend" for="travel-nickname-field{{number}}">Прозвище:</label>
+          <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field{{number}}">
+        </div>
+
+    </script>
+
+    <script src="js/tap.min.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/burger.js"></script>
     <script src="js/senddata.js"></script>
     <script src="js/range.js"></script>
-    <script src="js/tap.min.js"></script>
-    <script src="js/burger.js"></script>
-
-
+    <script src="js/addtraveller.js"></script>
 
   </body>
 </html>

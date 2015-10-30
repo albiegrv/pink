@@ -9,12 +9,6 @@
   &__title {
     margin-bottom: 32px;
     text-align: center;
-
-    font-size: $font-size;
-    line-height: $line-height - 6px;
-    text-transform: uppercase;
-
-    color: $pink-color;
   }
 
   &__number {
@@ -36,11 +30,6 @@
     margin-left: 25px;
     margin-right: 20px;
     margin-bottom: 7px;
-
-    font-size: $font-size;
-    text-transform: uppercase;
-
-    color: $pink-color;
   }
 
   &__delete {
@@ -57,11 +46,6 @@
     display: block;
     padding-right: 115px;
     margin-bottom: 7px;
-
-    font-size: $font-size;
-    text-transform: uppercase;
-
-    color: $pink-color;
   }
 }
 
@@ -103,10 +87,6 @@
 
     &__name span {
       margin-right: 68px;
-    }
-
-    &__name input[type="text"] {
-      margin-right: 50px;
     }
 
     &__delete {
@@ -168,10 +148,6 @@
       display: inline-block;
       vertical-align: top;
       margin-bottom: 0;
-    }
-
-    &__name input[type="text"] {
-      margin-right: 20px;
     }
 
     &__delete {
