@@ -1,0 +1,66 @@
+//
+//
+// Блок с кастомным чек боксом
+
+.input-checkbox {
+  margin-bottom: 43px;
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+
+  & label {
+    position: relative;
+    display: inline-block;
+    padding-left: 60px;
+
+    font-size: $font-size + 4px;
+    color: $navy-color;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+
+  & input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: 0px;
+  
+    width: 37px;
+    height: 37px;
+
+    background: white;
+    border-radius: 2px;
+    border: 2px solid #e5e5e5;
+  }
+
+  & input[type="checkbox"]:checked + label::before {
+    background: url('../img/yes--pink.svg') no-repeat 50% 50%;
+    background-size: 22px auto;
+  }
+
+  & input[type="checkbox"] + label:hover::before {
+    border-color: $navy-color;
+  }
+
+  & input[type="checkbox"] + label:active::before {
+    border-color: $pink-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .input-checkbox {
+    padding-left: 58px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .input-checkbox {
+    float: left;
+    width: 260px;
+    padding-left: 0;
+    margin-left: 53px;
+  }
+}

@@ -1,0 +1,445 @@
+//
+//
+// Блок с формой
+
+.form {
+  padding-top: 50px;
+
+  &__info {
+  @include container();  // Центровка и ширина
+  padding-bottom: 37px;
+
+  text-align: center;
+  background: #fff;
+  color: $navy-color;
+  font-size: $font-size;
+  }
+
+  &__please {
+    display: none;
+  }
+
+  &__name-field {
+    @include container();
+    padding-bottom: 25px;
+    border: none;
+  }
+
+  &__name-item {
+    margin-bottom: 18px;
+  }
+
+  &__name-item label {
+    display: block;
+    padding-left: 23px;
+    margin-bottom: 7px;
+  }
+
+  &__app-choice {
+    background: #f2f2f2;
+    padding-top: 38px;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+  }
+
+  &__app-choice-inner {
+    @include container();
+    font-size: 0; // Убираем лишние пробелы у инлайн-блоков
+    border: none;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__date-field {
+    @include container();
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  &__date-item {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__travellers {
+    padding-top: 32px;
+    padding-bottom: 7px;
+    margin-bottom: 48px;
+    background: #f2f2f2;
+  }
+
+  &__travellers-inner {
+    @include container();
+    border: none;
+  }
+
+  &__travel-number {
+    padding-bottom: 48px;
+    margin-bottom: 30px;
+
+    border-bottom: 2px solid #e5e5e5;
+    text-align: center;
+  }
+
+  &__travel-name {
+    margin-bottom: 18px;
+    font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
+  }
+
+  &__travel-name label,
+  &__travel-name span {
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+  }
+
+  &__travel-delete {
+    display: none;
+  }
+
+  &__travel-nickname {
+    margin-bottom: 40px;
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__travel-nickname label {
+    display: block;
+    padding-right: 115px;
+    margin-bottom: 7px;
+  }
+
+  &__achievements {
+    @include container();
+    margin-bottom: 3px;
+    border: none;
+  }
+
+  &__photos {
+    background: #f2f2f2;
+    padding-top: 32px;
+    padding-bottom: 6px;
+  }
+
+  &__photos-inner {
+    @include container();
+    border: none;
+  }
+
+  &__submit-block {
+    @include container();
+    padding-top: 48px;
+    padding-bottom: 55px;
+    text-align: center;
+  }
+
+  &__submit-block p {
+    display: inline-block;
+    margin: 0;
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $navy-color;
+  }
+
+  &__fill {
+    display: none;
+  }
+
+  &__star {
+    color: $pink-color;
+  }
+}
+
+@media (min-width: $screen_md) {
+
+  .form {
+    padding-top: 98px;
+
+    &__info {
+    @include container--tablet();  // Центровка и ширина
+    width: 495px;
+    padding-bottom: 40px;
+    font-size: $font-size + 4px;
+    }
+
+    &__please {
+      display: inline;
+    }
+
+    &__name-field {
+      @include container--tablet();
+      padding-bottom: 42px;
+    }
+
+    &__app-choice {
+      padding: 0;
+      margin-bottom: 52px;
+      background: white;
+    }
+
+    &__app-choice-inner {
+      @include container--tablet();
+      padding: 0;
+      padding-bottom: 60px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__title {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__date-field {
+      @include container--tablet();
+      padding: 0;
+      padding-bottom: 8px;
+      margin-bottom: 52px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__date-items {
+      @include clearfix();
+    }
+
+    &__date-item {
+      float: left;
+      width: 240px;
+      padding-left: 58px;
+      margin-right: 20px;
+      margin-bottom: 28px;
+    }
+
+    &__date-item:nth-child(2) {
+      padding-left: 0;
+      margin-right: 0;
+    }
+
+    &__travellers {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 52px;
+      background: white;
+    }
+
+    &__travellers-inner {
+      @include container--tablet();
+      padding: 0;
+      padding-bottom: 12px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__travel-number {
+      position: relative;
+      padding-bottom: 41px;
+      padding-left: 58px;
+      border-bottom: none;
+      text-align: left;
+    }
+
+    &__travel-number::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 58px;
+      width: 500px;
+
+      border: 1px solid #e5e5e5;
+    }
+
+    &__travel-name {
+      padding-left: 58px;
+    }
+
+    &__travel-name span {
+      margin-right: 68px;
+    }
+
+    &__travel-delete {
+      display: inline-block;
+      padding-top: 15px;
+      font-size: $font-size;
+      line-height: $line-height + 6px;
+      text-transform: uppercase;
+      color: $navy-color;
+      cursor: pointer;
+    }
+
+    &__travel-delete:hover {
+      text-decoration: underline;
+      color: $pink-color;
+    }
+
+    &__travel-delete:active {
+      text-decoration: none;
+      opacity: 0.3;
+    }
+
+    &__travel-nickname {
+      margin-bottom: 40px;
+      padding-left: 141px;
+      text-align: left;
+    }
+
+    &__travel-nickname label {
+      padding-left: 47px;
+    }
+
+    &__achievements {
+      @include container--tablet();
+      padding: 0;
+      margin-bottom: 52px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__photos {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 65px;
+      background: white;
+    }
+
+    &__photos-inner {
+      @include container--tablet();
+      padding: 0;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__submit-block {
+      @include container--tablet();
+      @include clearfix();
+      padding: 0;
+      margin-bottom: 64px;
+    }
+
+    &__submit-block p {
+      float: right;
+      max-width: 320px;
+      padding-top: 15px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .form {
+    &__info {
+    @include container--desktop();  // Центровка и ширина
+    width: 780px;
+    padding-bottom: 68px;
+    }
+
+    &__name-field {
+      @include container--desktop();
+      padding-bottom: 0px;
+    }
+
+    &__name-item {
+      float: left;
+      width: 300px;
+      margin-right: 20px;
+      margin-bottom: 52px;
+    }
+
+    &__name-item:last-child {
+      margin-right: 0;
+    }
+
+    &__app-choice-inner {
+      @include container--desktop();
+      @include clearfix();
+      padding: 0; 
+      padding-bottom: 60px;
+    }
+
+    &__date-field {
+      @include container--desktop();
+      padding: 0;
+      margin-bottom: 52px;
+    }
+
+    &__date-item {
+      width: 242px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &__date-item:nth-child(2) {
+      padding-left: 58px;
+    }
+
+    &__travellers-inner {
+      @include container--desktop();
+      padding: 0;
+      padding-bottom: 35px;
+    }
+
+    &__travel-number::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 58px;
+      width: 820px;  // !!!!!!!!!!!!!!!!!!!!!11111111111111
+
+      border: 1px solid #e5e5e5;
+    }
+
+    &__travel-item {
+      position: relative;
+      margin-bottom: 23px;
+    }
+
+    &__travel-name {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
+    }
+
+    &__travel-delete {
+      position: absolute;
+      right: 57px;
+    }
+
+    &__travel-nickname {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+
+    &__travel-nickname label {
+      padding-left: 27px;
+    }
+
+    &__achievements {
+      @include container--desktop();
+      @include clearfix();
+      padding: 0;
+      margin-bottom: 52px;
+    }
+
+    &__photos-inner {
+      @include container--desktop();
+      padding: 0;
+    }
+
+    &__submit-block {
+      @include container--desktop();
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    &__fill {
+      display: inline;
+    }
+  }
+}

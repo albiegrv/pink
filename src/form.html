@@ -14,9 +14,9 @@
     <header class="main-header main-header--inner-page">
 
 
-      <div class="main-header__nav-wrap main-header__nav-wrap--inner-page">
+      <div class="main-header__nav main-header__nav--inner-page">
 
-        <div class="main-header__top">
+        <div class="main-header__nav-inner">
 
           <div class="main-header__logo-wrap">
             <a class="main-header__logo-link" href="index.html">
@@ -83,8 +83,7 @@
               </svg>
 
               <svg class="main-header__cross" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.866px" height="23.866px" viewBox="0 0 23.866 23.866" enable-background="new 0 0 23.866 23.866" xml:space="preserve">
-                <path class="main-header__cross-part" fill="white" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.413,0.079,21.223,0,21.023,0s-0.39,0.079-0.53,0.22l-8.56,8.56L3.373,0.22c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094
-                c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z"/>
+                <path class="main-header__cross-part" fill="white" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.413,0.079,21.223,0,21.023,0s-0.39,0.079-0.53,0.22l-8.56,8.56L3.373,0.22c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z"/>
               </svg>
 
             </a>
@@ -128,17 +127,17 @@
 
         <div class="form__info">Поделитесь своей историей и получите шанс выйграть ценный приз – 1000 миль на вашу бонусную карту! <span class="form__please">Пожалуйста, заполните форму ниже:</span></div>
 
-        <fieldset class="fieldset-name">
+        <fieldset class="fieldset-name form__name-field">
 
-          <div class="fieldset-name__item">
+          <div class="form__name-item">
             <label class="label-legend" for="name-field">Имя: *</label>
             <input class="input-text" type="text" name="name" placeholder="Введите ваше имя" id="name-field">
           </div>
-          <div class="fieldset-name__item">
+          <div class="form__name-item">
             <label class="label-legend" for="surname-field">Фамилия: *</label>
             <input class="input-text" type="text" name="surname" placeholder="Укажите фамилию" id="surname-field">
           </div>
-          <div class="fieldset-name__item">
+          <div class="form__name-item">
             <label class="label-legend" for="patronymic-field">Отчество:</label>
             <input class="input-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic-field">
           </div>
@@ -147,19 +146,19 @@
 
         <div class="form__app-choice">
 
-          <fieldset class="fieldset-app">
+          <fieldset class="form__app-choice-inner">
 
-            <legend class="fieldset-app__title label-legend">С каким приложением путешествовали? *</legend>
+            <legend class="form__title label-legend">С каким приложением путешествовали? *</legend>
 
-            <div class="fieldset-app__item">
+            <div class="input-radio">
               <input type="radio" name="app-choice" value="pink-ios" id="ios-field" checked>
               <label for="ios-field">Pink для iOS</label>
             </div>
-            <div class="fieldset-app__item">
+            <div class="input-radio">
               <input type="radio" name="app-choice" value="pink-android" id="android-field">
               <label for="android-field">Pink на Android</label>
             </div>
-            <div class="fieldset-app__item">
+            <div class="input-radio">
               <input type="radio" name="app-choice" value="pink-windows" id="windows-field">
               <label for="windows-field">Windows Phone</label>
             </div>
@@ -168,18 +167,18 @@
 
         </div>
 
-        <fieldset class="fieldset-date">
+        <fieldset class="form__date-field">
 
-          <legend class="fieldset-date__title label-legend">Когда вы путешествовали? *</legend>
+          <legend class="form__title label-legend">Когда вы путешествовали? *</legend>
 
-          <div class="fieldset-date__items">
+          <div class="form__date-items">
 
-            <div class="fieldset-date__item">
+            <div class="form__date-item">
               <input class="input-date" type="date" name="departure-date" id="departure-date-field">
               <label class="label-legend" for="departure-date-field">Дата выезда</label>
             </div>
 
-            <div class="fieldset-date__item number-range">
+            <div class="form__date-item number-range">
               <div>
                 <span class="number-range__minus">–</span>
                 <input type="number" min="1" max="99" name="trip-duration" placeholder="10 дней" id="trip-duration-field" disabled>
@@ -188,7 +187,7 @@
               <label class="label-legend" for="trip-duration-field">Продолжительность</label>
             </div>
 
-            <div class="fieldset-date__item">
+            <div class="form__date-item">
               <input class="input-date" type="date" name="return-date" id="return-date-field" disabled>
               <label class="label-legend" for="return-date-field">Дата возвращения</label>
             </div>
@@ -199,19 +198,18 @@
 
         <div class="form__travellers">
 
-          <fieldset class="fieldset-travellers">
+          <fieldset class="form__travellers-inner">
 
-            <legend class="fieldset-travellers__title label-legend">Количество попутчиков *</legend>
+            <legend class="form__title label-legend">Количество попутчиков *</legend>
 
-            <div class="fieldset-travellers__number number-range number-range--travellers">
+            <div class="form__travel-number number-range number-range--travellers">
               <span class="number-range__minus">–</span>
               <input type="number" min="1" max="99" name="number-of-travellers" value="1" placeholder="2 чел" id="number-of-travellers-field" disabled>
               <span class="number-range__plus">+</span>
             </div>
 
-            <div class="fieldset-travellers__item">
-
-              <div class="fieldset-travellers__name">
+            <div class="form__travel-item">
+              <div class="form__travel-name">
                 <div>
                   <span class="label-legend">№</span>
                   <label class="label-legend" for="travel-name-field1">Имя: *</label>
@@ -219,45 +217,44 @@
                 <div>
                   <input class="input-count" type="text" name="num1" value="1" disabled>
                   <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field1">
-                  <div class="fieldset-travellers__delete">Удалить</div>
+                  <div class="form__travel-delete">Удалить</div>
                 </div>
               </div>
-              <div class="fieldset-travellers__nickname">
+              <div class="form__travel-nickname">
                 <label class="label-legend" for="travel-nickname-field1">Прозвище:</label>
                 <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field1">
               </div>
-
             </div>
 
           </fieldset>
 
         </div>
 
-        <fieldset class="fieldset-achieve">
+        <fieldset class="form__achievements">
 
-          <legend class="fieldset-achieve__title">Ваши безбашенные достижения в путешествии</legend>
+          <legend class="form__title label-legend">Ваши безбашенные достижения в путешествии</legend>
 
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="selfie-field" name="selfie" checked>
             <label for="selfie-field">Сделал селфи с акулой</label>
           </div>
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="burned-field" name="burned" checked>
             <label for="burned-field">Обгорел на пляже</label>
           </div>
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="chuck-field" name="chuck">
             <label for="chuck-field">Видел Чака Норриса</label>
           </div>
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="souvenir-field" name="souvenir">
             <label for="souvenir-field">Накупил сувениров</label>
           </div>
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="tower-field" name="tower" checked>
             <label for="tower-field">Удержал башню</label>
           </div>
-          <div class="fieldset-achieve__item">
+          <div class="input-checkbox">
             <input type="checkbox" id="destruction-field" name="destruction">
             <label for="destruction-field">Разгромил отель</label>
           </div>
@@ -266,16 +263,19 @@
 
         <div class="form__photos">
 
-          <fieldset class="fieldset-photos">
+          <fieldset class="form__photos-inner">
 
-            <legend class="fieldset-photos__title label-legend">Ваши фотографии из поездки *</legend>
+            <legend class="form__title label-legend">Ваши фотографии из поездки *</legend>
 
-            <div class="fieldset-photos__upload-photo">
-              <button>Загрузить фото</button>
-              <input type="file" name="images" id="upload-photo" accept="image/*" multiple>
-            </div>
+            <div class="input-file">
 
-            <div class="fieldset-photos__photos">
+              <div class="input-file__upload-photo">
+                <button class="btn">Загрузить фото</button>
+                <input type="file" name="images" id="upload-photo" accept="image/*" multiple>
+              </div>
+
+              <div class="input-file__photos">
+              </div>
 
             </div>
 
@@ -284,7 +284,7 @@
         </div>
 
         <div class="form__submit-block">
-          <input type="submit" value="ОТПРАВИТЬ ФОРМУ">
+          <input class="btn btn--submit" type="submit" value="ОТПРАВИТЬ ФОРМУ">
           <p><span class="form__star">*</span> – обязательные <span class="form__fill">для заполнения </span>поля</p>
         </div>
 
@@ -297,32 +297,6 @@
 
     <footer class="main-footer main-footer--inner-page">
 
-
-      <div class="main-footer__title">
-        <p class="main-footer__title-item">Остались вопросы?</p>
-        <p class="main-footer__title-item">Свяжитесь с нами</p>
-      </div>
-
-      <div class="main-footer__contacts">
-
-        <div class="main-footer__contacts-item">
-          <p class="main-footer__contacts-header">Звоните:</p>
-          <a class="main-footer__contacts-info" href="#">+7 (812) 555-66-66</a>
-        </div>
-
-        <div class="main-footer__contacts-item">
-          <p class="main-footer__contacts-header">Пишите:</p>
-          <a class="main-footer__contacts-info" href="#">mail@htmlacademy.ru</a>
-        </div>
-
-        <div class="main-footer__contacts-item">
-          <p class="main-footer__contacts-header">Приезжайте в гости:</p>
-          <a class="main-footer__contacts-info" href="#">ул. Большая Конюшенная, 19/8</a>
-        </div>
-
-      </div>
-
-      <div class="main-footer__map"></div>
 
       <div class="main-footer__bottom--visible">
 
@@ -392,9 +366,9 @@
 
         <img src="{{image}}" width="67" height="68" alt="{{name}}">
         <span>{{name}}</span>
-        <a class="fieldset-photos__delete" href="#">
-          <svg class="fieldset-photos__delete-cross" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-            <path class="fieldset-photos__delete-cross-part" fill="#c1c1c1" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+        <a class="input-file__delete" href="#">
+          <svg class="input-file__delete-cross" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+            <path class="input-file__delete-cross-part" fill="#c1c1c1" d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
           </svg>
         </a>
 
@@ -402,7 +376,7 @@
 
     <script id="traveller-template" type="text/html">
 
-        <div class="fieldset-travellers__name">
+        <div class="form__travel-name">
           <div>
             <span class="label-legend">№</span>
             <label class="label-legend" for="travel-name-field1">Имя: *</label>
@@ -410,10 +384,10 @@
           <div>
             <input class="input-count" type="text" name="num{{number}}" value="{{number}}" disabled>
             <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Введите ваше имя" id="travel-name-field{{number}}">
-            <div class="fieldset-travellers__delete">Удалить</div>
+            <div class="form__travel-delete">Удалить</div>
           </div>
         </div>
-        <div class="fieldset-travellers__nickname">
+        <div class="form__travel-nickname">
           <label class="label-legend" for="travel-nickname-field{{number}}">Прозвище:</label>
           <input class="input-text input-text--travellers" type="text" name="travel-name" value="" placeholder="Ну как же без этого!" id="travel-nickname-field{{number}}">
         </div>

@@ -16,11 +16,11 @@
     var plus  = parent.querySelector(".number-range__plus");
 
     // Ждём клика по минусу и плюсу
-    minus.addEventListener("click", function() {
+    minus.addEventListener("tap", function() {
       // При передаче в функцию false вычитаем 1
       changeNumber(false);
     });
-    plus.addEventListener("click", function() { 
+    plus.addEventListener("tap", function() { 
       // При передаче в функцию true добавляем 1
       changeNumber(true);
     });
@@ -49,5 +49,4 @@
       }
     }
   }
-
 })();
