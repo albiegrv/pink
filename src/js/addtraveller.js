@@ -20,11 +20,9 @@
   // Отлавливаем клик по плюсу
   plus.addEventListener("tap", function(event) {
 
-    var value = input.value;
-
     // Вставляем в наш шаблон значения из input
     var html = Mustache.render(template, {
-      "number": value
+      "number": input.value
     });
 
     // Создаем элемент div, добавляем его на страницу, 
@@ -35,20 +33,36 @@
 
     // Добавляем div в конец нашего блока
     area.appendChild(div);
+
+    // Удаление по клику на "удалить"
+    // Удаляется нужный див, но не меняется номер путешественника
+    div.querySelector(".form__travel-delete").addEventListener("tap", function(event) {
+      event.preventDefault();
+      div.parentNode.removeChild(div);
+      input.value = input.value - 1;
+    });
   });
 
-  //Ловим клик на минус
+  // Ловим клик на минус
   minus.addEventListener("tap", function(event) {
-    // Находим все добавленные дивы
-    var travellers = document.querySelectorAll(".form__travel-item");
+    // Находим всех путешественников
+    var travellers = area.querySelectorAll(".form__travel-item");
 
-    // Находим последний
-    // (при клике на "-" значение
-    // в инпуте уменьшается (скрипт range.js),
-    // поэтому как раз подходит input.value)
-    var lastDiv = travellers[input.value];
+    // Если пушественников > 1, то удаляем последнего
+    if (travellers.length > 1) {
 
-    // Удаляем его
-    lastDiv.parentNode.removeChild(lastDiv);
+      // Находим последний div (путешественника)
+      // (при клике на "-" значение
+      // в инпуте уменьшается (скрипт range.js),
+      // поэтому как раз подходит input.value)
+      var lastDiv = travellers[input.value];
+
+      // Удаляем его
+      lastDiv.parentNode.removeChild(lastDiv);
+    } else {
+      // Если путешественник 1, то ничего не делаем
+      return;
+    }
   });
+
 })();

@@ -7,7 +7,7 @@
   // Вызываем функцию на каждый из дивов
   for (var i = 0; i < elements.length; i++) {
     initNumberField(elements[i]);
-}
+  }
 
   // В каждом диве находим инпут, минус и плюс
   function initNumberField(parent) {
