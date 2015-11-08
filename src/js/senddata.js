@@ -10,7 +10,7 @@
   // Находим форму
   var form = document.querySelector(".form");
   // Находим div, в котором будут храниться превью фотографий
-  var area = document.querySelector(".fieldset-photos__photos");
+  var area = document.querySelector(".input-file__photos");
 
   // Находим шаблон, который будем вставлять в area
   // Шаблон находится в конце form.html в теге <script>
@@ -90,14 +90,14 @@
         // Создаем элемент div, добавляем его на страницу
         // Добавляем div'у класс и вставляем в него шаблон
         var div = document.createElement("div");
-        div.classList.add("fieldset-photos__photo");
+        div.classList.add("input-file__photo");
         div.innerHTML = html;
 
         // Вкладываем div в область с фото
         area.appendChild(div);
 
         // Вызываем ф-цию удаления фото при клике на крестик
-        div.querySelector(".fieldset-photos__delete").addEventListener("tap", function(event) {
+        div.querySelector(".input-file__delete").addEventListener("tap", function(event) {
           event.preventDefault();
           removePreview(div);
         });

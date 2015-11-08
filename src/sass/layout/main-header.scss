@@ -1,6 +1,6 @@
 //
 //
-// Стили для хедера главной страницы 
+// Стили для хедера 
 
 .main-header {
   background-color: $bg-pic-header;
@@ -18,22 +18,21 @@
     background-position: 50% 0%;
   }
 
-  &__nav-wrap {
+  &__nav {
     margin-bottom: 30px;
     background: rgb(0, 0, 0);      // Для IE8
     background: rgba(0, 0, 0, .3);
   }
 
-// Верхний блок хедера
-  &__top {
+  &__nav-inner {
     @include container();  // Центровка и ширина
     @include clearfix();   // Псевдораспорка для флоат-элементов
     padding: 21px;
     position: relative;    // Вложен абсолютный элемент &__menu--visible
   }
 
-  &__top--menu-visible {        // Когда раскрыто меню в мобильной и 
-    background: $text-color;    // планшетной версиях
+  &__nav-inner--menu-visible {  // Когда раскрыто меню в мобильной и 
+    background: $navy-color;    // планшетной версиях
     border-bottom: 1px solid #000101;
     padding: 24px;
   }
@@ -43,12 +42,13 @@
     width: 150px;
   }
 
-  &__logo-tablet { // svg-лого для планшетной версии
-    display: none;
+  &__logo-link:hover .main-header__logo-letter {
+    fill: $pink-color;
   }
 
-  &__logo-desktop { // svg-лого для десктопной версии
-    display: none;
+  &__logo-link:active .main-header__logo-letter {
+    fill: white;
+    opacity: 0.3;
   }
 
   &__toggle-wrap {  // обёртка для иконок бургера и крестика
@@ -57,19 +57,34 @@
   }
 
   &__burger--visible { // иконка гамбургера
-  display: inline;
+    display: inline;
   }
 
-  &__burger {
+  &__logo-tablet,   // svg-лого для планшетной версии
+  &__logo-desktop,  // svg-лого для десктопной версии
+  &__burger,        // svg-лого меню-гамбургера
+  &__cross {        // svg-лого крестика в меню
     display: none;
   }
 
-  &__cross { // иконка крестика (по дефолту скрыта)
-    display: none;
+  &__toggle:hover .main-header__burger-part {
+    fill: $pink-color;
+  }
+
+  &__toggle:active .main-header__burger-part {
+    opacity: 0.3;
   }
 
   &__cross--visible {  // иконка крестика
-    display: inline;        // появляется при открытии меню
+    display: inline;   // появляется при открытии меню
+  }
+
+  &__toggle:hover .main-header__cross-part {
+    fill: $pink-color;
+  }
+
+  &__toggle:active .main-header__cross-part {
+    opacity: 0.3;
   }
 
   &__title {               // Элемент с заголовком для главной страницы
@@ -109,37 +124,42 @@
     background-position: bottom, 50% 0%;
     background-size: 700px 545px, 1200px auto;
 
-
     &--inner-page {
       background-image: url('../img/background-tablet@1x.jpg');
       background-repeat: no-repeat;
       background-position: 50% 0%;
   }
 
-    &__nav-wrap {
+    &__nav {
       margin-bottom: 100px;
     }
 
-    &__nav-wrap--inner-page {
+    &__nav--inner-page {
       margin-bottom: 90px;
     }
 
-    &__top {
+    &__nav-inner {
       @include container--tablet();
       padding-top: 27px;
       padding-bottom: 42px;
     }
 
-    &__logo { // svg-лого для мобильной версии
+    &__logo,          // svg-лого для мобильной версии
+    &__logo-desktop { // svg-лого для десктопной версии
       display: none;
-  }
+    }
 
     &__logo-tablet { // svg-лого для планшетной версии
       display: inline;
     }
 
-    &__logo-desktop { // svg-лого для десктопной версии
-      display: none;
+    &__logo-link:hover .main-header__logo-tablet-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-link:active .main-header__logo-tablet-letter {
+      fill: white;
+      opacity: 0.3;
     }
 
     &__toggle-wrap {
@@ -158,9 +178,10 @@
 
   @media (min-resolution: 1.5dppx) {
     .main-header {
+      // ретинизированное изображение фона
       background-image: 
-        url('../img/iphone-hand-tablet@2x.png'),  // фон и рука с телефоном
-        url('../img/background-tablet@2x.jpg');   // для ретины
+        url('../img/iphone-hand-tablet@2x.png'),
+        url('../img/background-tablet@2x.jpg');
 
       &--inner-page {
         background-image:
@@ -188,25 +209,23 @@
       background-size: 100% auto;
   }
 
-    &__nav-wrap {
+    &__nav {
       margin-bottom: 130px;
     }
 
-    &__nav-wrap--inner-page {
+    &__nav--inner-page {
       margin-bottom: 85px;
     }
 
-    &__top {
+    &__nav-inner {
       @include container--desktop();
       padding-top: 27px;
       padding-bottom: 42px;
     }
 
-    &__logo { // svg-лого для мобильной версии
-      display: none;
-  }
-
-    &__logo-tablet { // svg-лого для планшетной версии
+    &__logo,         // svg-лого для мобильной версии
+    &__logo-tablet,  // svg-лого для планшетной версии
+    &__toggle-wrap { // прячем гамбургер
       display: none;
     }
 
@@ -214,8 +233,12 @@
       display: inline;
     }
 
-    &__toggle-wrap {
-      display: none;
+    &__logo-link:hover .main-header__logo-desktop-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-link:active .main-header__logo-desktop-letter {
+      opacity: 0.3;
     }
 
     &__title {
@@ -230,9 +253,10 @@
 
   @media (min-resolution: 1.5dppx) {
     .main-header {
+      // ретинизированное изображение фона
       background-image: 
-        url('../img/iphone-hand-desktop@2x.png'),  // фон и рука с телефоном
-        url('../img/background-fullsize.jpg');   // для ретины
+        url('../img/iphone-hand-desktop@2x.png'),
+        url('../img/background-fullsize.jpg');
 
       &--inner-page {
         background-image:

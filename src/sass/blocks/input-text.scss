@@ -16,7 +16,7 @@
   line-height: $line-height + 6px;
   font-weight: $weight-normal;
   font-family: $font-stack;
-  color: $text-color;
+  color: $navy-color;
 
   &--travellers {
     width: 80%;
@@ -25,7 +25,7 @@
   }
 
   &:hover {
-    border-color: $text-color;
+    border-color: $navy-color;
   }
 
   &:focus {

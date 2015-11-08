@@ -33,7 +33,7 @@
     border-bottom: none;
     text-align: center;
 
-    background: $text-color;
+    background: $navy-color;
     color: white;
     font-size: $font-size + 4px;
     font-weight: $weight-bold;
@@ -71,6 +71,11 @@
     padding-bottom: 18px;
   }
 
+  &__simple-cell img {
+    width: 29px;
+    height: 26px;
+  }
+
   &__left-cell {
     display: flex;
     padding-left: 22px;
@@ -78,7 +83,7 @@
     padding-bottom: 18px;
     border-left: 2px solid #e5e5e5;
     font-size: $font-size;
-    color: $text-color;
+    color: $navy-color;
   }
 
   &__simple-cell:nth-child(3) {
@@ -120,7 +125,7 @@
 
   &__control--active {
     background-color: #fff;
-    border-color: $text-color;
+    border-color: $navy-color;
   }
 }
 
@@ -149,7 +154,7 @@
 
     &__row:first-child {
       display: table-row;
-      background: $text-color;
+      background: $navy-color;
       font-size: $font-size + 2px;
     }
 

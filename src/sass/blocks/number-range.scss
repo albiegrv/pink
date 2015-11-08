@@ -17,7 +17,7 @@
     border-left: none;
     border-right: none;
     outline: none;
-    color: $text-color;
+    color: $navy-color;
     font-size: $font-size + 4px;
     text-align: center;
   }
@@ -35,7 +35,7 @@
     border: 2px solid #e5e5e5;
 
     font-size: 50px;
-    color: $text-color;
+    color: $navy-color;
     cursor: pointer;
     background: white;
   }
@@ -46,13 +46,13 @@
   }
 
   &__minus:hover, &__plus:hover {
-    border-color: $text-color;
+    border-color: $navy-color;
   }
 
   &__minus:active, &__plus:active {
     color: white;
-    background: $text-color;
-    border-color: $text-color;
+    background: $navy-color;
+    border-color: $navy-color;
   }
 }
 

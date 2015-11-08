@@ -15,10 +15,10 @@
   line-height: $line-height + 6px;
   font-weight: $weight-normal;
   font-family: $font-stack;
-  color: $text-color;
+  color: $navy-color;
 
   &:hover {
-    border-color: $text-color;
+    border-color: $navy-color;
   }
 
   &:disabled {

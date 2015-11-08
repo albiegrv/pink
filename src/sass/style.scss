@@ -1,53 +1,30 @@
 @import "normalize.scss";
 
 @import "variables.scss";
-
 @import "mixins.scss";
 
 @import "layout/base.scss";
-
 @import "layout/main-header.scss";
 
 @import "blocks/main-nav.scss";
-
 @import "blocks/page-title.scss";
-
 @import "blocks/download-app.scss";
 
 @import "blocks/features.scss";
-
 @import "blocks/review-slider.scss";
-
+@import "blocks/promo24h.scss";
 @import "blocks/option-table.scss";
 
-@import "blocks/form.scss";
-
-@import "blocks/fieldset-name.scss";
-
-@import "blocks/fieldset-app.scss";
-
-@import "blocks/fieldset-date.scss";
-
-@import "blocks/fieldset-travellers.scss";
-
-@import "blocks/fieldset-achieve.scss";
-
-@import "blocks/fieldset-photos.scss";
-
+@import "layout/form.scss";
 @import "blocks/label-legend.scss";
-
 @import "blocks/input-text.scss";
-
+@import "blocks/input-radio.scss";
 @import "blocks/input-date.scss";
-
 @import "blocks/number-range.scss";
-
 @import "blocks/input-count.scss";
-
+@import "blocks/input-checkbox.scss";
 @import "blocks/input-file.scss";
-
+@import "blocks/btn.scss";
 @import "blocks/social-btn.scss";
-
-@import "blocks/promo24h.scss";
 
 @import "layout/main-footer.scss";

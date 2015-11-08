@@ -10,7 +10,7 @@
   var close = document.querySelector(".main-header__cross");
 
   // Находим верхний блок хедера со всей навигацией
-  var top = document.querySelector(".main-header__top");
+  var wrap = document.querySelector(".main-header__nav-inner");
 
   // Находим скрытое меню
   var nav = document.querySelector(".main-nav");
@@ -30,7 +30,7 @@
     close.classList.toggle("main-header__cross--visible");
 
     // Меняем/возвращаем оформление верхней полосы навигации
-    top.classList.toggle("main-header__top--menu-visible");
+    wrap.classList.toggle("main-header__nav-inner--menu-visible");
 
     // Показываем/прячем меню
     nav.classList.toggle("main-nav--visible");

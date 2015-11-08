@@ -7,7 +7,7 @@
   // Вызываем функцию на каждый из дивов
   for (var i = 0; i < elements.length; i++) {
     initNumberField(elements[i]);
-}
+  }
 
   // В каждом диве находим инпут, минус и плюс
   function initNumberField(parent) {
@@ -16,11 +16,11 @@
     var plus  = parent.querySelector(".number-range__plus");
 
     // Ждём клика по минусу и плюсу
-    minus.addEventListener("click", function() {
+    minus.addEventListener("tap", function() {
       // При передаче в функцию false вычитаем 1
       changeNumber(false);
     });
-    plus.addEventListener("click", function() { 
+    plus.addEventListener("tap", function() { 
       // При передаче в функцию true добавляем 1
       changeNumber(true);
     });
@@ -49,5 +49,4 @@
       }
     }
   }
-
 })();
