@@ -4,7 +4,7 @@
 
 .input-text {
   display: block;
-  padding: 20px 22px 17px 22px;
+  padding: 15px 20px;
 
   box-sizing: border-box;
   width: 100%;
@@ -13,8 +13,10 @@
   outline: none;
 
   font-size: $font-size + 4px;
-
-  color: $text-color;
+  line-height: $line-height + 6px;
+  font-weight: $weight-normal;
+  font-family: $font-stack;
+  color: $navy-color;
 
   &--travellers {
     width: 80%;
@@ -23,7 +25,7 @@
   }
 
   &:hover {
-    border-color: $text-color;
+    border-color: $navy-color;
   }
 
   &:focus {
@@ -34,5 +36,12 @@
 @media (min-width: $screen_md) {
   .input-text--travellers {
       width: 300px;
+      margin-right: 50px;
     }
+}
+
+@media (min-width: $screen_lg) {
+  .input-text--travellers {
+    margin-right: 20px;
+  }
 }

@@ -1,0 +1,80 @@
+//
+//
+// Стили для кнопок
+
+.btn {  // Отправить фото
+  padding: 15px 0px;
+
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  outline: none;
+
+  font-size: $font-size + 4px;
+  line-height: $line-height + 6px;
+  font-weight: $weight-bold;
+  color: $navy-color;
+  background: white;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: $navy-color;
+  }
+
+  &:active {
+    border-color: $navy-color;
+    background: $navy-color;
+    color: white;
+  }
+  // Отправить форму
+  &--submit {
+    margin-bottom: 36px;
+
+    border-color: #2aab6d;
+    color: white;
+    background: #2aab6d;
+  }
+
+  &--submit:hover {
+    background: #1c9b5e;
+    border-color: #1c9b5e;
+  }
+
+  &--submit:active {
+    background: #1c9b5e;
+    border-color: #1c9b5e;
+    opacity: 0.3;
+  }
+
+  &--submit:disabled {
+    background: #e5e5e5;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .btn {
+    width: 500px;
+  }
+
+  .btn--submit {
+    float: left;
+    width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .btn {
+    width: 820px;
+    background: $pink-color;
+    border-color: $pink-color;
+    color: white;
+  }
+
+  .btn--submit {
+    width: 300px;
+    background: #2aab6d;
+    border-color: #2aab6d;
+  }
+}

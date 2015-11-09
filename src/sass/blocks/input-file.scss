@@ -2,49 +2,28 @@
 //
 // Блок формы для загрузки фотографий
 
-.fieldset-photos {
-    @include container();
-    border: none;
-
-  &__title {
-    margin-bottom: 30px;
-    text-align: center;
-
-    font-size: $font-size;
-    line-height: $line-height - 6px;
-    text-transform: uppercase;
-    color: $pink-color;
-  }
+.input-file {
 
   &__upload-photo {
     padding-bottom: 33px;
     margin-bottom: 35px;
     border-bottom: 2px solid #e5e5e5;
+
+    position: relative; // Для input[type="file"]
+    overflow: hidden;
   }
 
-  &__upload-photo button {
-    padding: 15px 0px;
-
-    box-sizing: border-box;
+  &__upload-photo input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    border: 2px solid #e5e5e5;
-    border-radius: 2px;
-    outline: none;
-
-    font-weight: $weight-bold;
-    color: $text-color;
-    background: white;
-    text-transform: uppercase;
-  }
-
-  &__upload-photo button:hover {
-    border-color: $text-color;
-  }
-
-  &__upload-photo button:active {
-    border-color: $text-color;
-    background: $text-color;
-    color: white;
+    height: 100%;
+    transform: scale(20);
+    letter-spacing: 10em;     /* IE 9 fix */
+    -ms-transform: scale(20); /* IE 9 fix */
+    opacity: 0;
+    cursor: pointer
   }
 
   &__photos {
@@ -60,22 +39,44 @@
   }
 
   &__photo:nth-child(3n) {
-    margin-right: 0;  // Обнуляем правый маргин у каждой 3-ей фотки
+    margin-right: 0;
   }
 
-  &__photo::after {   // Крестик для удаления фото
-    content: "";
-
+  &__delete {   // Крестик для удаления фото
     position: absolute;
     right: -14px;
     top: -14px;
     width: 28px;
     height: 28px;
 
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); // По макету как будто бордер
-    border-radius: 50%;                     // Но так выглядит лучше
-    background: white url('../img/icon_cross.png') no-repeat 50% 50%;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
     cursor: pointer;
+    background: white;
+  }
+
+  &__delete-cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -6px;
+  }
+
+  &__delete:hover {
+    border-color: $navy-color;
+  }
+
+  &__delete:hover .fieldset-photos__delete-cross-part {
+    fill: $navy-color;
+  }
+
+  &__delete:active {
+    background: $navy-color;
+  }
+
+  &__delete:active .fieldset-photos__delete-cross-part {
+    fill: white;
   }
 
   &__photo img {  // На всякий случай
@@ -84,19 +85,16 @@
   }
 
   &__photo span {
+    width: 100%;
     font-size: $font-size - 2px;
     line-height: $line-height - 6px;
-    color: $text-color;
+    color: $navy-color;
   }
 }
 
 @media (min-width: $screen_md) {
 
-  .fieldset-photos {
-    @include container--tablet();
-    padding: 0;
-    border: 2px solid #e5e5e5;
-    border-radius: 2px;
+  .input-file {
 
     &__upload-photo {
       position: relative;
@@ -104,10 +102,6 @@
       padding-bottom: 41px;
       margin-bottom: 65px;
       border-bottom: none;
-    }
-
-    &__upload-photo button {
-      width: 500px;
     }
 
     &__upload-photo::after {
@@ -136,12 +130,19 @@
       margin-right: 0;  // Обнуляем правый маргин у каждой 3-ей фотки
     }
 
-    &__photo::after {   // Крестик для удаления фото
+    &__delete {   // Крестик для удаления фото
       right: -25px;
       top: -25px;
       width: 50px;
       height: 50px;
-      background: white url('../img/icon_cross.png') no-repeat 50% 50%;
+    }
+
+    &__delete-cross {
+      width: 20px;
+      height: 20px;
+
+      margin-left: -10px;
+      margin-top: -10px;
     }
 
     &__photo img {  // На всякий случай
@@ -153,16 +154,7 @@
 
 @media (min-width: $screen_lg) {
 
-  .fieldset-photos {
-    @include container--desktop();
-    padding: 0;
-
-    &__upload-photo button {
-      width: 820px;
-      background: $pink-color;
-      border: $pink-color;
-      color: white;
-    }
+  .input-file {
 
     &__upload-photo::after {
       width: 820px;

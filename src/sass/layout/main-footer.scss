@@ -1,23 +1,19 @@
 //
 //
-// Стили для футера главной страницы 
+// Стили для футера 
 
 .main-footer {
   padding-top: 45px;
   background: #fff;
   text-align: center;
   font-family: $font-stack;
-  color: $text-color;
+  color: $navy-color;
 
   &--inner-page {
     padding-top: 0;
   }
 
   &__title {
-    display: none;
-  }
-
-  &__title--visible {
     @include container();
     margin-bottom: 40px;
     font-size: $font-size + 10px;
@@ -33,10 +29,6 @@
   }
 
   &__contacts {
-    display: none;
-  }
-
-  &__contacts-visible {
     @include container();
   }
 
@@ -52,24 +44,30 @@
   }
 
   &__contacts-info {
-    margin: 0;
+    text-decoration: none;
     font-size: $font-size + 10px;
     font-weight: $weight-light;
     color: $pink-color;
   }
 
-  &__map {
-    display: none;
+  &__contacts-info:hover {
+    color: $navy-color;
+    text-decoration: underline;
   }
 
-  &__map--visible {
+  &__contacts-info:active {
+    color: #ced0d2;
+    text-decoration: none;
+  }
+
+  &__map {
     position: relative;
     height: 220px;
     z-index: 1;
     background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
   }
 
-  &__map--visible::before {
+  &__map::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -97,19 +95,17 @@
     margin-bottom: 40px;
   }
 
-  &__logo {
-    // svg-лого для мобильной и планшетной
-    // версий по дефолту грузится оно
+  &__logo-wrap:hover  .main-footer__logo-letter {
+    fill: $pink-color;
+  }
+
+  &__logo-wrap:active  .main-footer__logo-letter {
+    opacity: 0.3;
   }
 
   &__logo-desktop { // svg-лого для десктопной версии
     display: none;
   }
-
-  // &__logo img {
-  //   width: 145px;
-  //   height: 40px;
-  // }
 
   &__social {
     margin-bottom: 40px;
@@ -129,7 +125,7 @@
 
     font-size: $font-size;
     line-height: $line-height - 6px;
-    color: $text-color;
+    color: $navy-color;
   }
 
   &__copyright a {
@@ -143,11 +139,11 @@
     fill: $pink-color;
   }
 
-  &__copyright-logo:hover {
-    fill: $text-color;
+  &__copyright:hover .main-footer__copyright-logo {
+    fill: $navy-color;
   }
 
-  &__copyright-logo:active {
+  &__copyright:active .main-footer__copyright-logo {
     opacity: 0.3;
   }
 }
@@ -160,7 +156,7 @@
       padding-top: 0;
     }
 
-    &__title--visible {
+    &__title {
       @include container--tablet();
       margin-bottom: 35px;
       font-size: $font-size + 26px;
@@ -171,7 +167,7 @@
       padding-bottom: 25px;
     }
 
-    &__contacts--visible {
+    &__contacts {
       @include container--tablet();
       position: relative;
       z-index: 10;
@@ -194,13 +190,13 @@
       margin-bottom: 8px;
     }
 
-    &__map--visible {
+    &__map {
       height: 380px;
       background-image: url('../img/main-map-tablet.jpg');
       background-position: 50% 60%;
     }
 
-    &__map--visible::before {
+    &__map::before {
       top: -30px;
       height: 123px;
       background-image: url('../img/mask_main-map-tablet.png');
@@ -248,7 +244,7 @@
       padding-top: 0;
     }
 
-    &__title--visible {
+    &__title {
       @include container--desktop();
       margin-bottom: 40px;
       font-size: $font-size + 36px;
@@ -258,7 +254,7 @@
       padding-bottom: 30px;
     }
 
-    &__contacts--visible {
+    &__contacts {
       @include container--desktop();
     }
 
@@ -281,14 +277,14 @@
       margin-bottom: 30px;
     }
 
-    &__map--visible {
+    &__map {
       height: 522px;
       background-image: url('../img/main-map-fullsize.jpg');
       background-position: 50% 60%;
       background-size: 100%;
     }
 
-    &__map--visible::before {
+    &__map::before {
       top: -120px;
       height: 262px;
       background-image: url('../img/mask_main-map-desktop.png');
@@ -314,6 +310,14 @@
     &__logo-desktop { // svg-лого для десктопной версии
       display: inline;
     }
+
+    &__logo-wrap:hover  .main-footer__logo-desktop-letter {
+      fill: $pink-color;
+  }
+
+    &__logo-wrap:active  .main-footer__logo-desktop-letter {
+      opacity: 0.3;
+  }
 
     &__copyright {
       max-width: 160px;

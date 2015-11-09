@@ -36,10 +36,18 @@
 
     text-align: center;
     text-decoration: none;
-    background: $text-color;
+    background: $navy-color;
     border-top: 1px solid #485461;
     border-bottom: 1px solid #000101;
     color: white;
+  }
+
+  &__link:hover {
+    color: $pink-color;
+  }
+
+  &__link:active {
+    color: #5d354e;
   }
 }
 
@@ -77,6 +85,14 @@
       padding: 17px 0px 8px 0px;
       border: none;
       background: none;
+    }
+
+    &__link:hover {
+      color: white;
+    }
+
+    &__link:active {
+      opacity: 0.3;
     }
 
     &__item:hover {

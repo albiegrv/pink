@@ -13,7 +13,6 @@ module.exports = function(grunt) {
           cwd: "src",
           src: [
             "img/**",
-            "js/**",
             "index.html",
             "form.html"
           ],
@@ -65,6 +64,30 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+        options: {
+          separator: ';',
+        },
+        dist: {
+          src: ['src/js/tap.min.js', 'src/js/mustache.min.js', 'src/js/burger.js', 'src/js/range.js', 'src/js/addtraveller.js', 'src/js/senddata.js'],
+          dest: 'build/js/script.js',
+        },
+      },
+
+    minified : {
+      files: {
+        src: [
+        'build/js/*.js'
+        ],
+        dest: 'build/js/'
+      },
+      options: {
+        sourcemap: false,
+        allinone: true,
+        dest_filename: "script.min.js"
+      }
+    },
+
     imagemin: {
       images: {
         options: {
@@ -93,10 +116,12 @@ module.exports = function(grunt) {
     "clean",
     "copy",
     "sass",
-    // "cmq",
+    "cmq",
     "postcss",
     "cssmin",
-    "imagemin",
+    "concat",
+    "minified",
+    //"imagemin",
     ]);
 
   config = require('./.gosha')(grunt, config);
