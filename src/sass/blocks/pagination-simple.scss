@@ -1,0 +1,44 @@
+//
+//
+// Блок с пагинацией в посте
+
+.pagination-simple {
+  @include container();
+  margin-bottom: 59px;
+
+  & a {
+    display: inline-block;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-bottom: 20px;
+    width: 124px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    text-align: center;
+
+    font-size: $font-size + 4px;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-decoration: none;
+    color: $navy-color;
+  }
+
+  & a:first-child {
+    margin-right: 20px;
+  }
+
+  & a:last-child {
+    width: 276px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  & a:hover {
+    border-color: $navy-color;
+  }
+
+  & a:active {
+    opacity: 0.3;
+  }
+}

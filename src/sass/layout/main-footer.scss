@@ -3,108 +3,15 @@
 // Стили для футера 
 
 .main-footer {
-  padding-top: 45px;
   background: #fff;
   text-align: center;
-  font-family: $font-stack;
-  color: $navy-color;
 
-  &--inner-page {
-    padding-top: 0;
-  }
-
-  &__title {
-    @include container();
-    margin-bottom: 40px;
-    font-size: $font-size + 10px;
-    font-weight: $weight-light;
-  }
-
-  &__title-item {
-    margin: 0;
-  }
-
-  &__title-item:first-child {
-    margin-bottom: 10px;
-  }
-
-  &__contacts {
-    @include container();
-  }
-
-  &__contacts-item {
-    margin-bottom: 30px;
-  }
-
-  &__contacts-header {
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: $font-size + 4px;
-    font-weight: $weight-bold;
-  }
-
-  &__contacts-info {
-    text-decoration: none;
-    font-size: $font-size + 10px;
-    font-weight: $weight-light;
-    color: $pink-color;
-  }
-
-  &__contacts-info:hover {
-    color: $navy-color;
-    text-decoration: underline;
-  }
-
-  &__contacts-info:active {
-    color: #ced0d2;
-    text-decoration: none;
-  }
-
-  &__map {
-    position: relative;
-    height: 220px;
-    z-index: 1;
-    background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
-  }
-
-  &__map::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: 0;
-    z-index: 5;
-    height: 47px;
-    background: url('../img/mask_main-map-tablet.png') no-repeat 50% 100%;
-    background-size: 100% 100%;
-  }
-
-  &__bottom {
-    display: none;
-  }
-
-  &__bottom--visible {
-    display: block;
-  }
-
-  &__bottom--index {  // Скрываем блок в футере главной страницы
-    display: none;    // Только в мобильной версии
+  &--index-page {      // Скрываем блок в футере главной страницы
+    display: none;     // Только в мобильной версии
   }
 
   &__logo-wrap {
     margin-bottom: 40px;
-  }
-
-  &__logo-wrap:hover  .main-footer__logo-letter {
-    fill: $pink-color;
-  }
-
-  &__logo-wrap:active  .main-footer__logo-letter {
-    opacity: 0.3;
-  }
-
-  &__logo-desktop { // svg-лого для десктопной версии
-    display: none;
   }
 
   &__social {
@@ -114,7 +21,7 @@
 
   &__copyright {
     margin-bottom: 45px;
-    font-size: 0;     // Убираем лишние пробелу у инлайн-блоков
+    font-size: 0;     // Убираем лишние пробелы у инлайн-блоков
   }
 
   &__copyright p {
@@ -125,6 +32,7 @@
 
     font-size: $font-size;
     line-height: $line-height - 6px;
+    font-family: $font-stack;
     color: $navy-color;
   }
 
@@ -150,65 +58,13 @@
 
 @media (min-width: $screen_md) {
   .main-footer {
-    padding-top: 60px;
+    @include container--tablet();
+    @include clearfix();
+    padding-top: 35px;
+    padding-bottom: 35px;
 
-    &--inner-page {
-      padding-top: 0;
-    }
-
-    &__title {
-      @include container--tablet();
-      margin-bottom: 35px;
-      font-size: $font-size + 26px;
-    }
-
-    &__title-item {
-      margin: 0;
-      padding-bottom: 25px;
-    }
-
-    &__contacts {
-      @include container--tablet();
-      position: relative;
-      z-index: 10;
-
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    &__contacts-item {
-      width: 50%;
-      margin-bottom: 60px;
-    }
-
-    &__contacts-item:last-child {
-      margin-bottom: 10px;
-    }
-
-    &__contacts-header {
-      margin-bottom: 8px;
-    }
-
-    &__map {
-      height: 380px;
-      background-image: url('../img/main-map-tablet.jpg');
-      background-position: 50% 60%;
-    }
-
-    &__map::before {
-      top: -30px;
-      height: 123px;
-      background-image: url('../img/mask_main-map-tablet.png');
-      background-size: 100%;
-    }
-
-    &__bottom--visible {
+    &--index-page {
       display: block;
-      @include container--tablet();
-      @include clearfix();
-      padding-top: 35px;
-      padding-bottom: 35px;
     }
 
     &__logo-wrap {
@@ -238,86 +94,13 @@
 
 @media (min-width: $screen_lg) {
   .main-footer {
-    padding-top: 80px;
-
-    &--inner-page {
-      padding-top: 0;
-    }
-
-    &__title {
-      @include container--desktop();
-      margin-bottom: 40px;
-      font-size: $font-size + 36px;
-    }
-
-    &__title-item {
-      padding-bottom: 30px;
-    }
-
-    &__contacts {
-      @include container--desktop();
-    }
-
-    &__contacts-item {
-      width: 33%;
-      margin-bottom: 30px;
-    }
-
-    &__contacts-item:nth-child(2) {
-      order: 3;
-    }
-
-    &__contacts-item:last-child {
-      width: 250px;
-      margin-bottom: 30px;
-      order: 2;
-    }
-
-    &__contacts-header {
-      margin-bottom: 30px;
-    }
-
-    &__map {
-      height: 522px;
-      background-image: url('../img/main-map-fullsize.jpg');
-      background-position: 50% 60%;
-      background-size: 100%;
-    }
-
-    &__map::before {
-      top: -120px;
-      height: 262px;
-      background-image: url('../img/mask_main-map-desktop.png');
-      background-size: auto 262px;
-    }
-
-    &__bottom--visible {
-      @include container--desktop();
-      @include clearfix();
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
+    @include container--desktop();
+    padding-top: 70px;
+    padding-bottom: 70px;
 
     &__logo-wrap {
       margin-right: 220px;
     }
-
-    &__logo {
-      display: none; // svg-лого для мобильной и планшетной
-                     // версий по дефолту грузится оно
-    }
-
-    &__logo-desktop { // svg-лого для десктопной версии
-      display: inline;
-    }
-
-    &__logo-wrap:hover  .main-footer__logo-desktop-letter {
-      fill: $pink-color;
-  }
-
-    &__logo-wrap:active  .main-footer__logo-desktop-letter {
-      opacity: 0.3;
-  }
 
     &__copyright {
       max-width: 160px;

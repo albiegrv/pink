@@ -6,13 +6,13 @@
   padding-top: 50px;
 
   &__info {
-  @include container();  // Центровка и ширина
-  padding-bottom: 37px;
+    @include container();  // Центровка и ширина
+    padding-bottom: 37px;
 
-  text-align: center;
-  background: #fff;
-  color: $navy-color;
-  font-size: $font-size;
+    text-align: center;
+    background: #fff;
+    color: $navy-color;
+    font-size: $font-size;
   }
 
   &__please {
@@ -44,7 +44,7 @@
 
   &__app-choice-inner {
     @include container();
-    font-size: 0; // Убираем лишние пробелы у инлайн-блоков
+    font-size: 0;        // Убираем лишние пробелы у инлайн-блоков
     border: none;
   }
 
@@ -86,7 +86,7 @@
 
   &__travel-name {
     margin-bottom: 18px;
-    font-size: 0;    // Убираем лишние пробелы у инлайн-блоков
+    font-size: 0;       // Убираем лишние пробелы у инлайн-блоков
   }
 
   &__travel-name label,

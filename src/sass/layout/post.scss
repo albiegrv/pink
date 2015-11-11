@@ -1,0 +1,105 @@
+//
+//
+// Блок с сеткой поста
+
+.post {
+  @include container();
+  padding-top: 43px;
+
+  &__preview {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+  }
+
+  &__preview h1 {
+    margin: 0;
+    margin-bottom: 23px;
+
+    font-size: $h1-size + 6px;
+    line-height: $line-height + 12px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    color: $navy-color;
+  }
+
+  &__preview time {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: $font-size - 2px;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  &__preview p {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-size: $font-size + 2px;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    color: $navy-color;
+  }
+
+  &__part {
+    text-align: left;
+  }
+
+  &__part h2 {
+    margin: 0;
+    margin-bottom: 23px;
+
+    font-size: $h1-size - 6px;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    color: $navy-color;
+  }
+
+  &__part p {
+    margin: 0;
+    margin-bottom: 33px;
+
+    font-size: $font-size;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    color: $navy-color;
+  }
+
+  &__part a {
+    color: $pink-color;
+  }
+
+  &__part ul {
+    padding-left: 20px;
+    margin: 0;
+    color: $pink-color;
+  }
+
+  &__part li {
+    margin-bottom: 30px;
+  }
+
+  &__list-item {
+    color: $navy-color;
+  }
+
+  &__part blockquote {
+    margin: 0;
+    padding-left: 20px;
+    margin-bottom: 32px;
+    border-left: 2px solid $pink-color;
+  }
+
+  &__review-author {
+    display: block;
+    color: #8a8a8a;
+  }
+}

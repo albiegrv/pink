@@ -1,0 +1,128 @@
+//
+//
+// Блок с контактными данными
+
+.contacts {
+  @include container();
+  padding-top: 45px;
+  font-family: $font-stack;
+  color: $navy-color;
+  background: #fff;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+  }
+
+  &__text:first-child {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__item-header {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: $font-size + 4px;
+    font-weight: $weight-bold;
+  }
+
+  &__item-info {
+    text-decoration: none;
+    font-size: $font-size + 10px;
+    font-weight: $weight-light;
+    color: $pink-color;
+  }
+
+  &__item-info:hover {
+    color: $navy-color;
+    text-decoration: underline;
+  }
+
+  &__item-info:active {
+    color: #ced0d2;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $screen_md) {
+
+  .contacts {
+    @include container--tablet();
+    padding-top: 60px;
+
+    &__text {
+      padding-bottom: 25px;
+      margin: 0;
+      margin-bottom: 35px;
+      font-size: $font-size + 26px;
+    }
+
+    &__text:first-child {
+      margin-bottom: 0;
+    }
+
+    &__items {
+      position: relative;
+      z-index: 10;
+
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 60px;
+    }
+
+    &__item:last-child {
+      margin-bottom: 10px;
+    }
+
+    &__item-header {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .contacts {
+    @include container--desktop();
+    padding-top: 80px;
+
+    &__text {
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+      font-size: $font-size + 36px;
+    }
+
+    &__text:first-child {
+      margin-bottom: 0px;
+    }
+
+    &__item {
+      width: 33%;
+      margin-bottom: 30px;
+    }
+
+    &__item:nth-child(2) {
+      order: 3;
+    }
+
+    &__item:last-child {
+      width: 250px;
+      margin-bottom: 30px;
+      order: 2;
+    }
+
+    &__item-header {
+      margin-bottom: 30px;
+    }
+  }
+}

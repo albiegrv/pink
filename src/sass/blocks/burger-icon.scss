@@ -1,0 +1,27 @@
+//
+//
+// Стили для svg иконки гамбургера
+
+.burger-icon__open {
+  display: inline;
+}
+
+.burger-icon__open--hidden {
+  display: none;
+}
+
+.burger-icon__close--hidden {
+  display: none;
+}
+
+.burger-icon__close {
+  display: inline;
+}
+
+.burger-icon:hover .burger-icon__part {
+  fill: $pink-color;
+}
+
+.burger-icon:active .burger-icon__part {
+  opacity: 0.3;
+}

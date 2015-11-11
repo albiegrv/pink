@@ -1,0 +1,40 @@
+//
+//
+// Стили для svg логотипа PINK
+
+.logo-pink:hover .logo-pink__part {
+  fill: $pink-color;
+}
+
+.logo-pink:active .logo-pink__part {
+  opacity: 0.3;
+}
+
+
+.logo-pink--tablet,     // svg-лого для планшетной версии
+.logo-pink--desktop {   // svg-лого для декстопной версии
+  display: none;
+}
+
+
+@media (min-width: $screen_md) {
+
+  .logo-pink--mobile {  // svg-лого для мобильной версии
+    display: none;
+  }
+
+  .logo-pink--tablet {  // svg-лого для планшетной версии
+    display: inline;
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .logo-pink--footer,   // svg-лого мобил. и планшет. версий футера
+  .logo-pink--tablet {  // svg-лого для планшетной версии
+    display: none;
+  }
+
+  .logo-pink--desktop {
+    display: inline;
+  }
+}

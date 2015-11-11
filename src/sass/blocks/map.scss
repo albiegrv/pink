@@ -1,0 +1,51 @@
+//
+//
+// Блок с интерактивной картой 
+
+.map {
+  position: relative;
+  height: 220px;
+  z-index: 1;
+  background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 65px;
+    background: url('../img/triangle-white-footer.svg') no-repeat 50% 100%;
+    background-size: 100% 65px;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .map {
+    height: 380px;
+    background-image: url('../img/main-map-tablet.jpg');
+    background-position: 50% 60%;
+
+    &::before {
+      height: 90px;
+      background-image: url('../img/triangle-white-footer.svg');
+      background-size: 100% 90px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .map {
+    height: 522px;
+    background-image: url('../img/main-map-fullsize.jpg');
+    background-position: 50% 60%;
+    background-size: 100%;
+
+    &::before {
+    height: 115px;
+    background-image: url('../img/triangle-white-footer.svg');
+    background-size: 100% 115px;
+    }
+  }
+}

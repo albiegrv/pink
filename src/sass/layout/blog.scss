@@ -1,0 +1,207 @@
+//
+//
+// Блок с сеткой страницы блога
+
+.blog {
+  @include container();
+  padding-top: 10px;
+
+  &__post-preview {
+    padding-top: 30px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__post-preview:nth-child(4n) {
+    border-bottom: none;
+    padding-bottom: 50px;
+  }
+
+  &__post-preview a {
+    color: $navy-color;
+    text-decoration: none;
+  }
+
+  &__post-preview a:hover {
+    text-decoration: underline;
+  }
+
+  &__post-preview h1 {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-size: $h2-size;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+  }
+
+  &__post-preview time {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: $font-size - 2px;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  &__post-preview p {
+    margin: 0;
+
+    font-size: $font-size - 2px;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    color: $navy-color;
+  }
+
+  &__pagination {
+    margin-bottom: 60px;
+    font-size: 0;
+  }
+
+  &__pagination-link {
+    display: inline-block;
+    padding: 15px 23px;
+    margin-right: 8px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+
+    font-size: $font-size + 4px;
+    line-height: $line-height + 6px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-decoration: none;
+    color: $navy-color;
+  }
+
+  &__pagination-link:hover {
+    border-color: $navy-color;
+  }
+
+  &__pagination-link:active {
+    opacity: 0.3;
+  }
+
+  &__pagination-link:nth-child(5n) {
+    margin-right: 0;
+  }
+
+  &__pagination-link--active {
+    border-color: $pink-color;
+  }
+
+  &__pagination-link--active:hover {
+    border-color: $pink-color;
+  }
+
+  &__pagination-pages {
+    display: none;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .blog {
+    @include container--tablet();
+    padding-top: 49px;
+
+    &__post-preview {
+      position: relative;
+      padding-top: 47px;
+      padding-bottom: 44px;
+      margin-left: 60px;
+      border-bottom: 2px dotted #e5e5e5;
+    }
+
+    &__post-preview:nth-child(5n) {
+      padding-bottom: 52px;
+    }
+
+    &__post-preview::before {
+      content: "";
+
+      position: absolute;
+      top: 52px;
+      left: -60px;
+      width: 28px;
+      height: 26px;
+      background: url('../img/blog-post-icon.svg') no-repeat 50% 50%;
+    }
+
+    &__post-preview h1 {
+      margin-bottom: 10px;
+
+      font-size: $h2-size + 9px;
+      line-height: $line-height + 6px;
+    }
+
+    &__post-preview time {
+      margin-bottom: 26px;
+
+      font-size: $font-size;
+      line-height: $line-height + 6px;
+    }
+
+    &__post-preview p {
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+    }
+
+    &__pagination {
+      position: relative;
+      margin-bottom: 48px;
+      margin-left: 60px;
+    }
+
+    &__pagination-link {
+      margin-right: 11px;
+    }
+
+    &__pagination:before {
+      content: "Стр.";
+
+      position: absolute;
+      top: 15px;
+      left: -60px;
+
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+      font-family: $font-stack;
+      font-weight: $weight-bold;
+      text-transform: uppercase;
+      color: $navy-color;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .blog {
+    @include container--desktop();
+    padding-top: 55px;
+
+    &__post-preview {
+      padding-top: 53px;
+      padding-bottom: 55px;
+      margin-left: 60px;
+    }
+
+    &__post-preview:nth-child(5n) {
+      padding-bottom: 94px;
+    }
+
+    &__post-preview::before {
+      top: 58px;
+    }
+
+    &__pagination {
+      margin-bottom: 35px;
+    }
+
+    &__pagination-link {
+      margin-right: 11px;
+    }
+  }
+}
