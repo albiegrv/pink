@@ -27,6 +27,11 @@
   margin: 0 auto;
 }
 
+@mixin container--desktop-post-page() {
+  width: 820px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
 
 //
 //

@@ -89,6 +89,11 @@
 
   &__list-item {
     color: $navy-color;
+    font-size: $font-size;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    color: $navy-color;
   }
 
   &__part blockquote {
@@ -96,10 +101,108 @@
     padding-left: 20px;
     margin-bottom: 32px;
     border-left: 2px solid $pink-color;
+
+    font-size: $font-size;
+    line-height: $line-height + 3px;
+    font-family: $font-stack;
+    font-weight: $weight-normal;
+    color: $navy-color;
   }
 
   &__review-author {
     display: block;
     color: #8a8a8a;
   }
+}
+
+@media (min-width: $screen_md) {
+  .post {
+    @include container--tablet();
+    padding-top: 90px;
+
+    &__preview {
+      position: relative;
+      border-bottom: 2px dotted #e5e5e5;
+      margin-bottom: 55px;
+    }
+
+    &__preview h1 {
+      margin-bottom: 40px;
+
+      font-size: $h1-size + 26px;
+      line-height: $line-height + 26px;
+    }
+
+    &__preview time {
+      width: 300px;
+
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      margin-left: -150px;
+      margin-bottom: 0px;
+
+      font-size: $font-size;
+      line-height: $line-height + 6px;
+      background: white;
+    }
+
+    &__preview p {
+      margin-bottom: 46px;
+
+      font-size: $font-size + 10px;
+      line-height: $line-height + 16px;
+    }
+
+    &__part h2 {
+      margin-bottom: 30px;
+
+      font-size: $h1-size;
+      line-height: $line-height + 6px;
+    }
+
+    &__part p {
+      margin-bottom: 38px;
+
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+    }
+
+    &__part p:last-child {
+      margin-bottom: 63px;
+    }
+
+    &__part li {
+      padding-left: 20px;
+      margin-bottom: 37px;
+    }
+
+    &__list-item {
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+    }
+
+    &__part blockquote {
+      padding-left: 35px;
+      margin-bottom: 63px;
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
+    }
+  } 
+}
+
+@media (min-width: $screen_lg) {
+  .post {
+    @include container--desktop-post-page();
+    padding-top: 110px;
+
+    &__preview h1 {
+      font-size: $h1-size + 26px;
+      line-height: $line-height + 6px;
+    }
+
+    &__preview p {
+      margin-bottom: 42px;
+    }
+  } 
 }

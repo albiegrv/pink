@@ -21,6 +21,7 @@
     font-family: $font-stack;
     font-weight: $weight-bold;
     text-decoration: none;
+    text-transform: uppercase;
     color: $navy-color;
   }
 
@@ -40,5 +41,47 @@
 
   & a:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .pagination-simple {
+    @include container--tablet();
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    & a {
+      margin-bottom: 0px;
+      width: 137px;
+    }
+
+    & a:first-child {
+      margin-right: 0px;
+      order: 1;
+    }
+
+    & a:nth-child(2) {
+      order: 3;
+    }
+
+    & a:last-child {
+      width: 296px;
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .pagination-simple {
+    @include container--desktop-post-page();
+
+    & a {
+      width: 256px;
+    }
+
+    & a:last-child {
+      width: 273px;
+    }
   }
 }

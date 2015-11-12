@@ -71,7 +71,7 @@ module.exports = function(grunt) {
           separator: ';',
         },
         dist: {
-          src: ['src/js/tap.min.js', 'src/js/mustache.min.js', 'src/js/burger.js', 'src/js/range.js', 'src/js/addtraveller.js', 'src/js/senddata.js'],
+          src: ['bower_components/tap/dist/tap.min.js', 'bower_components/mustache.js/mustache.min.js', 'bower_components/moment/min/moment.min.js', 'src/js/burger.js', 'src/js/range.js', 'src/js/addtraveller.js', 'src/js/senddata.js', 'src/js/changedate.js'],
           dest: 'build/js/script.js',
         },
       },

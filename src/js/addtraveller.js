@@ -3,10 +3,8 @@
   // Находим блок для ввода путешественников
   var area = document.querySelector(".form__travellers-inner");
 
-  // Находим блок с числовым input
-  var parent = document.querySelector(".form__travel-number");
   // Находим input с количеством путешественников
-  var input = parent.querySelector("input");
+  var input = document.querySelector("#number-of-travellers-field");
 
   // Находим минус
   var minus = area.querySelector(".number-range__minus");
