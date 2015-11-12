@@ -9,6 +9,8 @@
   var minus = area.querySelector(".number-range__minus");
   var plus = area.querySelector(".number-range__plus");
 
+  // Используя библиотеку moment.js заносим в поле 
+  // выезда сегодняшнюю дату
   start.value = moment().format("YYYY-MM-DD");
 
   minus.addEventListener("tap", function(event) {
