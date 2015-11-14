@@ -55,15 +55,25 @@
     display: none;
   }
 
-  //Можно реализовать слайдер на CSS
-  //
-  // &__slides-wrap {
+  &__slides-wrap {
+    height: 225px;
+    position: relative;
+  }
 
-  // }
+  &__slide {
+    display: none;
 
-  // &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
-  // }
+  &__slide--active {
+    display: block;
+  }
 
   &__author {
     margin-bottom: 18px;
@@ -80,6 +90,8 @@
   }
 
   &__text {
+    margin-bottom: 15px;
+
     font-size: $font-size;
     line-height: $line-height + 6px;
     font-family: $font-stack;
@@ -97,9 +109,8 @@
       bottom: 20px;
     }
 
-    &__slide {
-      position: relative;
-      padding-bottom: 95px;
+    &__slides-wrap {
+      min-height: 180px;
     }
 
     &__author {
@@ -145,6 +156,27 @@
       display: none;
     }
 
+    &__slides-wrap {
+      width: 690px;
+      margin: 0 auto;
+    }
+
+    &__slides-wrap::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -115px;
+      margin-left: -70px;
+      z-index: 100;
+
+      width: 140px;
+      height: 63px;
+
+      background: 
+        transparent url('../img/quotes.svg') no-repeat 50% 50%;
+    }
+
     &__arrow-wrap {
       display: block;
       position: absolute;
@@ -166,33 +198,12 @@
       fill: #bec2c7;
     }
 
-    &__arrow:hover {
+    &__arrow-wrap:hover .review-slider__arrow {
       fill: #7e868f;
     }
 
-    &__arrow:active {
+    &__arrow-wrap:active .review-slider__arrow {
       fill: #e9ebec;
-    }
-
-    &__slide {
-      position: relative;
-      width: 685px;
-      padding-bottom: 100px;
-      margin: 0 auto;
-    }
-
-    &__slide::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: -115px;
-      margin-left: -70px;
-
-      width: 140px;
-      height: 63px;
-
-      background: 
-        transparent url('../img/quotes.svg') no-repeat 50% 50%;
     }
 
     &__author {
