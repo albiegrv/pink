@@ -1,6 +1,6 @@
 (function() {
 
-  // Находим все контролы
+  // Находим все контролы слайдера
   var controls = document.querySelectorAll(".review-slider__control");
 
   // Вызываем ф-цию на каждый из контролов
@@ -8,23 +8,21 @@
     changeControl(controls[i], i);
   }
 
-  // Находим стрелочки
+  // Находим правую и левую стрелки слайдера
   var left = document.querySelector(".review-slider__arrow-wrap--left");
   var right = document.querySelector(".review-slider__arrow-wrap--right");
-  var slides = document.querySelectorAll(".review-slider__slide");
 
   // Ловим клик на правую стрелку
   left.addEventListener("tap", function() {
     // Находим текущий слайд
     var current = document.querySelector(".review-slider__slide--active");
-    // Находим следующий слайд
+    // Находим предыдущий слайд
     var prev = current.previousElementSibling;
 
     if (prev != null) {
       current.classList.remove("review-slider__slide--active");
       prev.classList.add("review-slider__slide--active");
     }
-
   });
 
   // Ловим клик на правую стрелку
@@ -38,7 +36,6 @@
       current.classList.remove("review-slider__slide--active");
       next.classList.add("review-slider__slide--active");
     }
-
   });
 
   // Ф-ция, сменяюшая активный контрол

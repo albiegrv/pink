@@ -70,13 +70,21 @@ module.exports = function(grunt) {
         options: {
           separator: ';',
         },
-        dist: {
-          src: ['bower_components/tap/dist/tap.min.js', 'bower_components/mustache.js/mustache.min.js', 'bower_components/moment/min/moment.min.js', 'src/js/burger.js', 'src/js/revslider.js'],
+        index: {
+          src: ['bower_components/tap/dist/tap.min.js', 'src/js/burger.js', 'src/js/revslider.js'],
+          dest: 'build/js/index.js',
+        },
+        form: {
+          src: ['bower_components/tap/dist/tap.min.js', 'bower_components/mustache.js/mustache.min.js', 'bower_components/moment/min/moment.min.js', 'src/js/burger.js', 'src/js/range.js', 'src/js/changedate.js', 'src/js/addtraveller.js', 'src/js/senddata.js'],
+          dest: 'build/js/form.js',
+        },
+        basic: {
+          src: ['bower_components/tap/dist/tap.min.js', 'src/js/burger.js'],
           dest: 'build/js/script.js',
         },
       },
 
-    minified : {
+    minified: {
       files: {
         src: [
         'build/js/*.js'
@@ -85,8 +93,8 @@ module.exports = function(grunt) {
       },
       options: {
         sourcemap: false,
-        allinone: true,
-        dest_filename: "script.min.js"
+        allinone: false,
+        ext: '.min.js'
       }
     },
 
@@ -99,6 +107,13 @@ module.exports = function(grunt) {
           expand: true,
           src: ["build/img/**/*.{png, jpg, gif, svg}"]
         }]
+      }
+    },
+
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["src/sass/**/*.scss"]
       }
     },
 
@@ -125,7 +140,7 @@ module.exports = function(grunt) {
     "cssmin",
     "concat",
     "minified",
-    //"imagemin",
+    "imagemin",
     ]);
 
   config = require('./.gosha')(grunt, config);
